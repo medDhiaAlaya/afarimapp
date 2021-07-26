@@ -8,6 +8,12 @@ class ForgetPasswordScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.close),
+          onPressed: (){
+            Navigator.pop(context);
+          },
+        ),
         elevation: 0.0,
         backgroundColor: Color(0xFF006633),
         title: Text(

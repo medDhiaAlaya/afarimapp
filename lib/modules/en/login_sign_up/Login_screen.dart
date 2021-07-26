@@ -1,14 +1,23 @@
-import 'package:afarim/en/Forgot_Password_screen.dart';
-import 'package:afarim/en/SignUp_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive/responsive.dart';
 import 'package:email_validator/email_validator.dart';
 
-class LoginScreen extends StatelessWidget {
+import 'Forgot_Password_screen.dart';
+import 'SignUp_screen.dart';
+
+
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({Key? key}) : super(key: key);
+
+  @override
+  _LoginScreenState createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
   var emailController = TextEditingController();
   var passwordController = TextEditingController();
-
+  bool isObscureText=true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,6 +37,7 @@ class LoginScreen extends StatelessWidget {
                 children: [
                   Center(
                     child: Container(
+                      //width: MediaQuery.of(context).size.width * 0.8,
                       width: 140,
                       height: 100,
                       child: Image.asset(
@@ -37,7 +47,7 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 10.0,
+                    height: 40.0,
                   ),
                   Text('Login to your account',
                     style: GoogleFonts.cairo(
@@ -79,7 +89,7 @@ class LoginScreen extends StatelessWidget {
                     child: TextFormField(
                       controller: passwordController,
                       keyboardType: TextInputType.visiblePassword,
-                      obscureText: true,
+                      obscureText:isObscureText,
                       onFieldSubmitted: (String value) {
                         print(value);
                       },
@@ -88,8 +98,15 @@ class LoginScreen extends StatelessWidget {
                       },
                       decoration: InputDecoration(
                         labelText: 'Password',
-                        suffixIcon: Icon(
-                          Icons.remove_red_eye,
+                        suffixIcon: IconButton(
+                          onPressed: (){
+                            setState(() {
+                              isObscureText = !isObscureText;
+                            });
+                          },
+                          icon: Icon(isObscureText?
+                            Icons.visibility:Icons.visibility_off
+                          ),
                         ),
                         border: OutlineInputBorder(),
                       ),
@@ -140,58 +157,6 @@ class LoginScreen extends StatelessWidget {
                   ),
                   SizedBox(
                     height: 48.0,
-                  ),
-                  Center(
-                    child: Text('Or login with',
-                      style: GoogleFonts.cairo(
-                        textStyle: TextStyle(
-                          color: Color(0xFF313131),
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
-                          height: 0.9,
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 21.0,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Expanded(
-                        child: OutlinedButton(
-                          onPressed: () {},
-                          style: ButtonStyle(
-                            shape: MaterialStateProperty.all(
-                              RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(7.0),
-                              ),
-                            ),
-                          ),
-                          child: Icon(Icons.facebook_rounded,
-
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 33.0,
-                      ),
-                      Expanded(
-                        child: OutlinedButton(
-                          onPressed: () {},
-                          style: ButtonStyle(
-                            shape: MaterialStateProperty.all(
-                              RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(7.0),),),
-                          ),
-                          child: Image.asset(
-                            'icons/iconfinder_Google_1298745.png',
-                            height: 20.0,
-                          ),
-                        ),
-                      ),
-                    ],
                   ),
                   SizedBox(
                     height: 21.0,
@@ -245,3 +210,15 @@ class LoginScreen extends StatelessWidget {
         MaterialPageRoute(builder: (context) => ForgetPasswordScreen()));
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+

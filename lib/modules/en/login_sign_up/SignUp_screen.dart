@@ -1,16 +1,43 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
+
+import 'Login_screen.dart';
 
 
 
-class LoginScreen extends StatelessWidget {
+class SignUpScreen extends StatefulWidget {
+  @override
+  _SignUpScreenState createState() => _SignUpScreenState();
+}
+
+class _SignUpScreenState extends State<SignUpScreen> {
   var emailController = TextEditingController();
   var passwordController = TextEditingController();
+  var confirmPasswordController = TextEditingController();
+  bool isObscureText=true;//for password
+  bool isObscureTextConfirm=true; //for password confirm
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.close),
+          onPressed: (){
+            Navigator.pop(context);
+          },
+        ),
+        elevation: 0.0,
+        backgroundColor: Color(0xFF006633),
+        title: Text(
+          'Create an account',
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.w600,
+            fontSize: 14,
+          ),
+        ),
+      ),
 
       body: Padding(
         padding: const EdgeInsets.only(
@@ -23,6 +50,7 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                //logo
                 Center(
                   child: Container(
                     width:140 ,
@@ -36,7 +64,8 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(
                   height: 10.0,
                 ),
-                Text('Login to your account',
+                //create your account
+                Text('Create your account',
                   style: GoogleFonts.cairo(
                     textStyle: TextStyle(
                       color: Color(0xFF313131),
@@ -49,6 +78,27 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(
                   height: 15.0,
                 ),
+                //enter username
+                Container(
+                  width: double.infinity,
+                  height: 36,
+                  child: TextFormField(
+                    onFieldSubmitted: (String value) {
+                      print(value);
+                    },
+                    onChanged: (String value) {
+                      print(value);
+                    },
+                    decoration: InputDecoration(
+                      labelText: 'Username',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 15.0,
+                ),
+                //email
                 Container(
                   width: double.infinity,
                   height: 36,
@@ -70,13 +120,14 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(
                   height: 15.0,
                 ),
+                //password
                 Container(
                   width:double.infinity,
                   height: 36,
                   child: TextFormField(
                     controller: passwordController,
                     keyboardType: TextInputType.visiblePassword,
-                    obscureText: true,
+                    obscureText:isObscureText,
                     onFieldSubmitted: (String value) {
                       print(value);
                     },
@@ -85,8 +136,15 @@ class LoginScreen extends StatelessWidget {
                     },
                     decoration: InputDecoration(
                       labelText: 'Password',
-                      suffixIcon: Icon(
-                        Icons.remove_red_eye,
+                      suffixIcon: IconButton(
+                        onPressed: (){
+                          setState(() {
+                            isObscureText = !isObscureText;
+                          });
+                        },
+                        icon: Icon(
+                          isObscureText? Icons.visibility:Icons.visibility_off,
+                        ),
                       ),
                       border: OutlineInputBorder(),
                     ),
@@ -95,6 +153,40 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(
                   height: 20.0,
                 ),
+                //confirm password
+                Container(
+                  width:double.infinity,
+                  height: 36,
+                  child: TextFormField(
+                    controller: confirmPasswordController ,
+                    keyboardType: TextInputType.visiblePassword,
+                    obscureText: isObscureTextConfirm,
+                    onFieldSubmitted: (String value) {
+                      print(value);
+                    },
+                    onChanged: (String value) {
+                      print(value);
+                    },
+                    decoration: InputDecoration(
+                      labelText: 'Confirm Password',
+                      suffixIcon: IconButton(
+                        onPressed: (){
+                          setState(() {
+                            isObscureTextConfirm=!isObscureTextConfirm;
+                          });
+                        },
+                        icon: Icon(isObscureTextConfirm?
+                          Icons.visibility:Icons.visibility_off,
+                        ),
+                      ),
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                //button sign up
                 Container(
                   width: double.infinity,
                   height: 36,
@@ -106,90 +198,30 @@ class LoginScreen extends StatelessWidget {
                     onPressed: () {
                       print(emailController.text);
                       print(passwordController.text);
+                      print(confirmPasswordController.text);
                     },
                     child: Text(
-                      'Login',
+                      'Sign up',
                       style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 14,
-                    ),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 10.0,
-                ),
-                TextButton(
-                  onPressed: (){},
-                  child:  Text('Forgot your Password?',
-                  style: GoogleFonts.cairo(
-                    textStyle: TextStyle(
-                      color: Color(0xFF313131),
-                      fontWeight: FontWeight.bold,
-                      fontSize: 13,
-                      height: 0.9,
-                    ),
-                  ),
-                ),
-                ),
-                SizedBox(
-                  height: 48.0,
-                ),
-                Center(
-                  child: Text('Or login with',
-                    style: GoogleFonts.cairo(
-                      textStyle: TextStyle(
-                        color: Color(0xFF313131),
+                        color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                        height: 0.9,
+                        fontSize: 14,
                       ),
                     ),
                   ),
                 ),
                 SizedBox(
+                  height: 30.0,
+                ),
+
+                SizedBox(
                   height: 21.0,
                 ),
+
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Expanded(
-                      child: OutlinedButton(
-                        onPressed: (){},
-                        style: ButtonStyle(
-                          shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(7.0),
-                          ),
-                          ),
-                        ),
-                        child: Icon(Icons.facebook_rounded,
-
-                      ),
-                      ),
-                      ),
-                    SizedBox(
-                      width: 33.0,
-                    ),
-                    Expanded(
-                      child: OutlinedButton(
-                        onPressed: (){},
-                        style: ButtonStyle(
-                          shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(7.0),),),
-                        ),
-                        child: Image.asset(
-                            'icons/iconfinder_Google_1298745.png',
-                            height: 20.0,
-                      ),
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 21.0,
-                ),
-                Row(
-                  children: [
-                    Text('You Don\'t have an account?',
+                    Text('You have an account?',
                       style: GoogleFonts.cairo(
                         textStyle: TextStyle(
                           color: Color(0xFF313131),
@@ -199,7 +231,9 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    TextButton(onPressed: (){}, child: Text('Sign up',
+                    TextButton(onPressed: (){
+                      _navigateToNextScreen(context);
+                    }, child: Text('Sign in',
                       style: GoogleFonts.cairo(
                         textStyle: TextStyle(
                           color: Color(0xFF999966),
@@ -223,4 +257,8 @@ class LoginScreen extends StatelessWidget {
       ),
     );
   }
+
+  void _navigateToNextScreen(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => LoginScreen()));
+}
 }
