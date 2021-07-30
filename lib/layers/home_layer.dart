@@ -4,6 +4,7 @@ import 'package:afarim/modules/en/favorite/favori_screen.dart';
 import 'package:afarim/modules/en/home/home_screen.dart';
 import 'package:afarim/modules/en/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 class HomeLayer extends StatefulWidget {
   const HomeLayer({Key? key}) : super(key: key);
