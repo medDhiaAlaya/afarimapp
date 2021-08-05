@@ -5,7 +5,6 @@ import 'package:afarim/modules/en/home/home_screen.dart';
 import 'package:afarim/modules/en/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 class HomeLayer extends StatefulWidget {
   const HomeLayer({Key? key}) : super(key: key);
 
@@ -27,41 +26,33 @@ class _HomeLayerState extends State<HomeLayer> {
   Widget build(BuildContext context) {
     return Scaffold(
       // bottom Navigation bar
-      bottomNavigationBar:BottomNavigationBar(
-        currentIndex:currentIndex,
+      bottomNavigationBar: ConvexAppBar(
+        backgroundColor: const Color(0xff006633),
+
+
+      style: TabStyle.flip,
+      items: [
+        TabItem(icon:Icons.home,
+        title: 'Home'),
+        TabItem(icon: Icons.search,
+        title:'Search' ),
+        TabItem(icon:Icons.calendar_today_outlined,
+        title: 'Booking'),
+        TabItem(icon: Icons.favorite_border,
+        title:'favorite'),
+        TabItem(icon: Icons.account_circle_outlined,
+        title: 'Profile'),
+      ],
+      initialActiveIndex: 0,
         onTap: (index){
-      setState(() {
-        currentIndex=index;
+          setState(() {
+            currentIndex=index;
 
-      }
-      );
+          }
+          );
 
-    },
-    showUnselectedLabels: true,
-    unselectedItemColor: const Color(0xff5b6180),
-    selectedItemColor: const Color(0xff006633),
-    type: BottomNavigationBarType.fixed,
-
-    items: [
-        BottomNavigationBarItem(
-    icon:Icon(Icons.home,
+        },
     ),
-    label:'Home',
-    ),
-        BottomNavigationBarItem(icon:Icon(Icons.search),
-    label: 'Search',
-    ),
-         BottomNavigationBarItem(icon:Icon(Icons.calendar_today_outlined),
-    label: 'Booking',
-    ),
-         BottomNavigationBarItem(icon:Icon(Icons.favorite_border),
-    label: 'Favori',
-    ),
-        BottomNavigationBarItem(icon:Icon(Icons.account_circle_outlined),
-    label: 'Profile',
-    ),
-    ],
-      ),
     body:screens[currentIndex],
     );
   }
