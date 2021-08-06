@@ -82,9 +82,7 @@ class _SelectRoomsScreenState extends State<SelectRoomsScreen> {
                   children: [
                     CircleAvatar(
                       backgroundColor: const Color(0xff999966),
-                     child: Icon(Icons.bed,
-                     color: Colors.white,
-                     ),
+                     child: Image(image: AssetImage('icons/rooms.png'),),
 
                       radius: 25,
 
@@ -191,9 +189,7 @@ class _SelectRoomsScreenState extends State<SelectRoomsScreen> {
                       children: [
                         CircleAvatar(
                           backgroundColor: const Color(0xff999966),
-                          child: Icon(Icons.bed,
-                            color: Colors.white,
-                          ),
+                          child: Image(image: AssetImage('icons/guests.png'),),
 
                           radius: 25,
 
@@ -276,9 +272,7 @@ class _SelectRoomsScreenState extends State<SelectRoomsScreen> {
                       children: [
                         CircleAvatar(
                           backgroundColor: const Color(0xff999966),
-                          child: Icon(Icons.bed,
-                            color: Colors.white,
-                          ),
+                          child: Image(image: AssetImage('icons/guests.png'),),
 
                           radius: 25,
 
@@ -361,9 +355,7 @@ class _SelectRoomsScreenState extends State<SelectRoomsScreen> {
                       children: [
                         CircleAvatar(
                           backgroundColor: const Color(0xff999966),
-                          child: Icon(Icons.bed,
-                            color: Colors.white,
-                          ),
+                          child: Image(image: AssetImage('icons/guests.png'),),
 
                           radius: 25,
 

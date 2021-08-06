@@ -16,28 +16,34 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Expanded(
-          child: Stack(
-            alignment:Alignment.center ,
-            children: [
+        Stack(
+          alignment:Alignment.center ,
+          children: [
 
-              Container(
-                child: Image(image: AssetImage('icons/backgroun_home.jpg'),
-                ),
+            Container(
+
+              width: double.infinity,
+              height: 250,
+              child: Image(image: AssetImage('icons/backgroun_home.jpg'),
+                fit: BoxFit.fill,
+
+
               ),
-              Text(
+            ),
+            Expanded(
+              child: Text(
                   "Get inspired \n for your next adventure",
                   style: const TextStyle(
                       color:  const Color(0xffffffff),
                       fontWeight: FontWeight.w700,
                       fontFamily: "BeaufortforLOL",
                       fontStyle:  FontStyle.normal,
-                      fontSize: 19.0
+                      fontSize: 20.0
                   ),
                   textAlign: TextAlign.center
-              )
-            ],
-          ),
+              ),
+            )
+          ],
         ),
         Expanded(
           child: Padding(
@@ -144,7 +150,7 @@ class _HomeScreenState extends State<HomeScreen> {
           shrinkWrap: true,
           separatorBuilder: (BuildContext context, int index) =>SizedBox(width: 10,),
           scrollDirection: Axis.horizontal,
-          itemCount: 3,
+          itemCount: 6,
           itemBuilder: (BuildContext context, int index) => Container(
             clipBehavior: Clip.antiAliasWithSaveLayer,
 

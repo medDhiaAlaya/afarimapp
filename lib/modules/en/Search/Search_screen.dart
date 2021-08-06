@@ -4,6 +4,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:like_button/like_button.dart';
+
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({Key? key}) : super(key: key);
@@ -12,7 +14,7 @@ class SearchScreen extends StatefulWidget {
 }
 
 class _SearchScreenState extends State<SearchScreen> {
-  bool isLiked = false;
+  //bool isLiked = false;
   bool isHotelPressed = false;
   bool isFlightPressed = false;
   bool hotelIsVisible = false;
@@ -21,44 +23,46 @@ class _SearchScreenState extends State<SearchScreen> {
 
   List<Map<String, String>> popular = [
     {
-      'img': 'icons/photo-1548588681-adf41d474533.jpg',
+      'img': 'icons/backgroun_home.jpg',
       "name": 'Rain Forest',
       "rate": '4.5'
     },
     {
-      'img': 'icons/photo-1548588681-adf41d474533.jpg',
+      'img': 'icons/backgroun_home.jpg',
       "name": 'Lake Louise',
-      "rate": '4.5'
+      "rate": '2.1'
     },
     {
-      'img': 'icons/photo-1548588681-adf41d474533.jpg',
+      'img': 'icons/backgroun_home.jpg',
       "name": 'Plitivice Lakes',
-      "rate": '4.5'
+      "rate": '1.9'
     },
     {
-      'img': 'icons/photo-1548588681-adf41d474533.jpg',
+      'img': 'icons/backgroun_home.jpg',
       "name": 'Dubai',
+      "rate": '2.4'
+    },
+    {
+      'img': 'icons/backgroun_home.jpg',
+      "name": 'Tower',
       "rate": '4.5'
     },
     {
-      'img': 'icons/photo-1548588681-adf41d474533.jpg',
-      "name": 'Effil Tower',
-      "rate": '4.5'
-    },
-    {
-      'img': 'icons/photo-1548588681-adf41d474533.jpg',
+      'img': 'icons/backgroun_home.jpg',
       "name": 'Pyramids',
-      "rate": '4.5'
+      "rate": '3.6'
     },
     {
-      'img': 'icons/photo-1548588681-adf41d474533.jpg',
+      'img': 'icons/backgroun_home.jpg',
       "name": 'island',
       "rate": '4.5'
     },
     {
-      'img': 'icons/photo-1548588681-adf41d474533.jpg',
+      'img': 'icons/backgroun_home.jpg',
       "name": 'Biza Tower',
-      "rate": '4.5'
+      "rate": '4.5',
+
+
     },
   ];
 
@@ -329,17 +333,13 @@ class _SearchScreenState extends State<SearchScreen> {
                                   Positioned(
                                     top: 1,
                                     right: 4,
-                                    child:IconButton(
-                                      icon: Icon(Icons.favorite,
-                                        color:(isLiked) ? Color(0xffeb147b) : Colors.white,),
-                                      onPressed: (){
-                                        setState(() {
-                                          //isLiked.(index)=!isLiked;
+                                    child:LikeButton(
+                                      likeBuilder: (bool isLiked) {
+                                        return Icon(
+                                          Icons.favorite,
+                                          color: isLiked ? Colors.pinkAccent : Colors.white,
 
-                                          isLiked=!isLiked;
-
-
-                                        });
+                                        );
                                       },
                                     ),
                                   ),
@@ -357,10 +357,10 @@ class _SearchScreenState extends State<SearchScreen> {
                     ),
                   ),
                   //hotel
-                 Visibility(
-                visible: hotelIsVisible,
-                child: HotelSearchScreen(),
-              ),
+                  Visibility(
+                    visible: hotelIsVisible,
+                    child: HotelSearchScreen(),
+                  ),
                   //flight
                   Visibility(
                     visible: flightIsVisible,

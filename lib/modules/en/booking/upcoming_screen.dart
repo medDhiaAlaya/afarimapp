@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:like_button/like_button.dart';
 
 class UpcomingScreen extends StatefulWidget {
   const UpcomingScreen({Key? key}) : super(key: key);
@@ -12,47 +13,47 @@ class UpcomingScreen extends StatefulWidget {
 class _UpcomingScreenState extends State<UpcomingScreen> {
   List<Map<String, String>> booking = [
     {
-      'img': 'icons/photo-1548588681-adf41d474533.jpg',
+      'img': 'icons/backgroun_home.jpg',
       "name": 'The Orlando House',
       "place": 'municipality, state',
       "rate":"3.8",
       "reviews":"(1234 reviews)",
-      "price":"233£",
+      "price":"300 \$",
     },
     {
-      'img': 'icons/photo-1548588681-adf41d474533.jpg',
+      'img': 'icons/backgroun_home.jpg',
       "name": 'Istanbul',
       "place": 'Turkey',
       "rate":"3.8",
       "reviews":"(1234 reviews)",
-      "price":"233£",
+      "price":"233 \$",
     },
     {
-      'img': 'icons/photo-1548588681-adf41d474533.jpg',
+      'img': 'icons/backgroun_home.jpg',
       "name": 'Istanbul',
       "place": 'Turkey',
       "rate":"3.8",
       "reviews":"(1234 reviews)",
-      "price":"233£",
+      "price":"136 \$",
     },
     {
-      'img': 'icons/photo-1548588681-adf41d474533.jpg',
+      'img': 'icons/backgroun_home.jpg',
       "name": 'Istanbul',
       "place": 'Turkey',
       "rate":"3.8",
       "reviews":"(1234 reviews)",
-      "price":"233£",
+      "price":"166 \$",
     },
     {
-      'img': 'icons/photo-1548588681-adf41d474533.jpg',
+      'img': 'icons/backgroun_home.jpg',
       "name": 'Istanbul',
       "place": 'Turkey',
       "rate":"3.8",
       "reviews":"(1234 reviews)",
-      "price":"233£",
+      "price":"233 \$",
     },
     {
-      'img': 'icons/photo-1548588681-adf41d474533.jpg',
+      'img': 'icons/backgroun_home.jpg',
       "name": 'Istanbul',
       "place": 'Turkey',
       "rate":"3.8",
@@ -115,8 +116,15 @@ class _UpcomingScreenState extends State<UpcomingScreen> {
                         Positioned(
                           top: 4,
                           right: 4,
-                          child: Icon(Icons.favorite,
-                          color:Colors.pinkAccent),
+                          child: LikeButton(
+                            likeBuilder: (bool isLiked) {
+                              return Icon(
+                                Icons.favorite,
+                                color: isLiked ? Colors.pinkAccent : Colors.white,
+
+                              );
+                            },
+                          ),
                         ),
                       ],
                     ),

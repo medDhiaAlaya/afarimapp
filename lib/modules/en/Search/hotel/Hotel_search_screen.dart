@@ -109,7 +109,6 @@ class _HotelSearchScreenState extends State<HotelSearchScreen> {
                         Expanded(
                           child: GestureDetector(
                             onTap: (){
-
                               Navigator.push(context,MaterialPageRoute(builder: (context)=>DateScreen()),
                               );
                             },
