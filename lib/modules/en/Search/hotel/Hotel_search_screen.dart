@@ -1,6 +1,5 @@
 import 'package:afarim/modules/en/Search/hotel/Select_rooms_screen.dart';
 import 'package:afarim/modules/en/Search/hotel/hotels_screen.dart';
-import 'package:afarim/modules/en/Search/hotel/select_date_screen.dart';
 import 'package:flutter/material.dart';
 class HotelSearchScreen extends StatefulWidget {
   const HotelSearchScreen({Key? key}) : super(key: key);
@@ -10,7 +9,22 @@ class HotelSearchScreen extends StatefulWidget {
 }
 
 class _HotelSearchScreenState extends State<HotelSearchScreen> {
+  DateTime? _selectedDate;
+void _datePicker(){
+  showDatePicker(
+      context: context,
+      initialDate: DateTime.now(),
+      firstDate: DateTime(2021),
+      lastDate: DateTime(2022),
+  ).then((value){
+    if(value == null){return ;}
+    setState(() {
+      _selectedDate=value;
+    });
+  });
 
+
+}
 
   @override
   Widget build(BuildContext context) {
@@ -109,8 +123,7 @@ class _HotelSearchScreenState extends State<HotelSearchScreen> {
                         Expanded(
                           child: GestureDetector(
                             onTap: (){
-                              Navigator.push(context,MaterialPageRoute(builder: (context)=>DateScreen()),
-                              );
+                              _datePicker();
                             },
                             child: Container(
                               width: 154,
@@ -135,7 +148,7 @@ class _HotelSearchScreenState extends State<HotelSearchScreen> {
                                     SizedBox(width: 10,
                                     ),
                                     Text(
-                                        "20",
+                                        "$_selectedDate",
                                         style: const TextStyle(
                                             color:  const Color(0xff313131),
                                             fontWeight: FontWeight.w700,
