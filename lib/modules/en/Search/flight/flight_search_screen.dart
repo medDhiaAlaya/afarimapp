@@ -1,3 +1,4 @@
+import 'package:afarim/modules/en/Search/flight/flights_results.dart';
 import 'package:flutter/material.dart';
 class FlightScreen extends StatefulWidget {
   const FlightScreen({Key? key}) : super(key: key);
@@ -484,7 +485,11 @@ class _FlightScreenState extends State<FlightScreen> {
             padding: const EdgeInsets.symmetric(horizontal:50),
             child: Container(
                 child: MaterialButton(
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=>FlightResult()),
+                    );
+
+                  },
                   child: Center(
                     child: Text(
                       "Find flights",

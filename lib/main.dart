@@ -1,3 +1,4 @@
+import 'package:afarim/modules/en/Search/flight/review_your_trip.dart';
 import 'package:flutter/material.dart';
 import 'layers/home_layer.dart';
 import 'modules/splash_screen/splash_screen.dart';
@@ -9,7 +10,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeLayer(),
+      home: ReviewYourTrip(),
+      //HomeLayer(),
       //SplashScreen(),
     );
   }

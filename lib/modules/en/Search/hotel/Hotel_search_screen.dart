@@ -1,6 +1,9 @@
 import 'package:afarim/modules/en/Search/hotel/Select_rooms_screen.dart';
 import 'package:afarim/modules/en/Search/hotel/hotels_screen.dart';
+import 'package:afarim/modules/en/Search/hotel/search_hotels_result.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+
 class HotelSearchScreen extends StatefulWidget {
   const HotelSearchScreen({Key? key}) : super(key: key);
 
@@ -9,27 +12,9 @@ class HotelSearchScreen extends StatefulWidget {
 }
 
 class _HotelSearchScreenState extends State<HotelSearchScreen> {
-  DateTime? _selectedDate;
-void _datePicker(){
-  showDatePicker(
-      context: context,
-      initialDate: DateTime.now(),
-      firstDate: DateTime(2021),
-      lastDate: DateTime(2022),
-  ).then((value){
-    if(value == null){return ;}
-    setState(() {
-      _selectedDate=value;
-    });
-  });
-
-
-}
-
   @override
   Widget build(BuildContext context) {
     return Container(
-
       color: const Color(0xfff7f7f7),
       child:Expanded(
         child: Container(
@@ -122,8 +107,8 @@ void _datePicker(){
                       children: [
                         Expanded(
                           child: GestureDetector(
-                            onTap: (){
-                              _datePicker();
+                            onTap: ()
+                            {
                             },
                             child: Container(
                               width: 154,
@@ -148,13 +133,13 @@ void _datePicker(){
                                     SizedBox(width: 10,
                                     ),
                                     Text(
-                                        "$_selectedDate",
+                                        "text",
                                         style: const TextStyle(
                                             color:  const Color(0xff313131),
                                             fontWeight: FontWeight.w700,
                                             fontFamily: "Cairo",
                                             fontStyle:  FontStyle.normal,
-                                            fontSize: 18.0
+                                            fontSize: 18.0,
                                         ),
                                         textAlign: TextAlign.center
                                     ),
@@ -182,8 +167,8 @@ void _datePicker(){
                                                     fontStyle:  FontStyle.normal,
                                                     fontSize: 14.0
                                                 ),
-                                                text: "Jul 2021\n"),
-
+                                                text: "text "
+                                            ),
                                             TextSpan(
                                                 style: const TextStyle(
                                                     color:  const Color(0xff999966),
@@ -192,7 +177,18 @@ void _datePicker(){
                                                     fontStyle:  FontStyle.normal,
                                                     fontSize: 14.0
                                                 ),
-                                                text: "Tuesday"),
+                                                text: "text\n"
+                                            ),
+                                            TextSpan(
+                                                style: const TextStyle(
+                                                    color:  const Color(0xff999966),
+                                                    fontWeight: FontWeight.w400,
+                                                    fontFamily: "Cairo",
+                                                    fontStyle:  FontStyle.normal,
+                                                    fontSize: 14.0
+                                                ),
+                                                text: "text"
+                                            ),
                                           ],
                                         ),
                                       ),
@@ -367,7 +363,10 @@ void _datePicker(){
                 padding: const EdgeInsets.all(20.0),
                 child: Container(
                     child: MaterialButton(
-                      onPressed: (){},
+                      onPressed: (){
+                        Navigator.push(context,MaterialPageRoute(builder:(context)=>SearchHotelsResult()),
+                        );
+                      },
                       child: Center(
                         child: Text(
                           "Search",

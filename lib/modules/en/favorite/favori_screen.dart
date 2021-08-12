@@ -37,7 +37,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
 
             ],
           ),
-          title: Center(child: Text('Booking')),
+          title: Center(child: Text('Favorite')),
         ),
         body: TabBarView(
           children: [
