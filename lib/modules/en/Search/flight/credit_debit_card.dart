@@ -1,4 +1,8 @@
+import 'package:afarim/modules/en/Search/flight/boarding_pass.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_credit_card/credit_card_form.dart';
+import 'package:flutter_credit_card/credit_card_model.dart';
+import 'package:flutter_credit_card/credit_card_widget.dart';
 
 class CreditCardPayment extends StatefulWidget {
   const CreditCardPayment({Key? key}) : super(key: key);
@@ -8,9 +12,17 @@ class CreditCardPayment extends StatefulWidget {
 }
 
 class _CreditCardPaymentState extends State<CreditCardPayment> {
+  String cardNumber = '';
+  String expiryDate = '';
+  String cardHolderName = '';
+  String cvvCode = '';
+  bool isCvvFocused = false;
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(
         title: // Payment
         Text(
@@ -27,249 +39,229 @@ class _CreditCardPaymentState extends State<CreditCardPayment> {
         elevation: 0,
         backgroundColor: const Color(0xff006633),
       ),
-      body: Stack(
+      body: Column(
+
         children: [
-          ListView(
-            children: [
-              Container(
-                padding: EdgeInsets.symmetric(horizontal: 20),
-                width: double.infinity,
-                height: 90,
-                decoration: BoxDecoration(
-                    color: const Color(0xff006633)
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            width: double.infinity,
+            height: 90,
+            decoration: BoxDecoration(
+                color: const Color(0xff006633)
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
                     children: [
-                      Row(
-                        children: [
 
-                          // PAR
-                          Text(
-                              "PAR",
-                              style: const TextStyle(
-                                  color:  const Color(0xffffffff),
-                                  fontWeight: FontWeight.w700,
-                                  fontFamily: "Cairo",
-                                  fontStyle:  FontStyle.normal,
-                                  fontSize: 18.0
-                              ),
-                              textAlign: TextAlign.center
-                          ),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          Icon(Icons.compare_arrows,
-                            color: Colors.white,),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          // TUN
-                          Text(
-                              "TUN",
-                              style: const TextStyle(
-                                  color:  const Color(0xffffffff),
-                                  fontWeight: FontWeight.w700,
-                                  fontFamily: "Cairo",
-                                  fontStyle:  FontStyle.normal,
-                                  fontSize: 18.0
-                              ),
-                              textAlign: TextAlign.center
-                          ),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          // -
-                          Text(
-                              "-",
-                              style: const TextStyle(
-                                  color:  const Color(0xffffffff),
-                                  fontWeight: FontWeight.w700,
-                                  fontFamily: "Cairo",
-                                  fontStyle:  FontStyle.normal,
-                                  fontSize: 18.0
-                              ),
-                              textAlign: TextAlign.center
-                          ),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          // Round-trip
-                          Text(
-                              "Round-trip",
-                              style: const TextStyle(
-                                  color:  const Color(0xffffffff),
-                                  fontWeight: FontWeight.w700,
-                                  fontFamily: "Cairo",
-                                  fontStyle:  FontStyle.normal,
-                                  fontSize: 18.0
-                              ),
-                              textAlign: TextAlign.center
-                          ),
-
-                        ],
-                      ),
-                      SizedBox(height: 10,),
-                      // 1 Adult - 20 Jul - 26 Jul
+                      // PAR
                       Text(
-                        "1 Adult - 20 Jul - 26 Jul",
-                        style: const TextStyle(
-                            color:  const Color(0xffffffff),
-                            fontWeight: FontWeight.w400,
-                            fontFamily: "Cairo",
-                            fontStyle:  FontStyle.normal,
-                            fontSize: 11.0
-                        ),
-
+                          "PAR",
+                          style: const TextStyle(
+                              color:  const Color(0xffffffff),
+                              fontWeight: FontWeight.w700,
+                              fontFamily: "Cairo",
+                              fontStyle:  FontStyle.normal,
+                              fontSize: 18.0
+                          ),
+                          textAlign: TextAlign.center
                       ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Icon(Icons.compare_arrows,
+                        color: Colors.white,),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      // TUN
+                      Text(
+                          "TUN",
+                          style: const TextStyle(
+                              color:  const Color(0xffffffff),
+                              fontWeight: FontWeight.w700,
+                              fontFamily: "Cairo",
+                              fontStyle:  FontStyle.normal,
+                              fontSize: 18.0
+                          ),
+                          textAlign: TextAlign.center
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      // -
+                      Text(
+                          "-",
+                          style: const TextStyle(
+                              color:  const Color(0xffffffff),
+                              fontWeight: FontWeight.w700,
+                              fontFamily: "Cairo",
+                              fontStyle:  FontStyle.normal,
+                              fontSize: 18.0
+                          ),
+                          textAlign: TextAlign.center
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      // Round-trip
+                      Text(
+                          "Round-trip",
+                          style: const TextStyle(
+                              color:  const Color(0xffffffff),
+                              fontWeight: FontWeight.w700,
+                              fontFamily: "Cairo",
+                              fontStyle:  FontStyle.normal,
+                              fontSize: 18.0
+                          ),
+                          textAlign: TextAlign.center
+                      ),
+
                     ],
                   ),
-                ),
-              ),
-              SizedBox(height: 30,
-              ),
-              // Credit/ Debit Card
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 40),
-                child: Text(
-                    "Credit/ Debit Card",
+                  SizedBox(height: 10,),
+                  // 1 Adult - 20 Jul - 26 Jul
+                  Text(
+                    "1 Adult - 20 Jul - 26 Jul",
                     style: const TextStyle(
-                        color:  const Color(0xff313131),
-                        fontWeight: FontWeight.w700,
+                        color:  const Color(0xffffffff),
+                        fontWeight: FontWeight.w400,
                         fontFamily: "Cairo",
                         fontStyle:  FontStyle.normal,
-                        fontSize: 15.0
+                        fontSize: 11.0
                     ),
-                    textAlign: TextAlign.left,
-                ),
-              ),
-              // Rectangle 705
-              // Rectangle 705
-              Padding(
-                padding: const EdgeInsets.all(30),
-                child: Container(
-                    width: double.infinity,
-                    height: 200,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(
-                            Radius.circular(6)
-                        ),
-                        boxShadow: [BoxShadow(
-                            color: const Color(0x3b000000),
-                            offset: Offset(0,3),
-                            blurRadius: 6,
-                            spreadRadius: 0
-                        )] ,
-                        color: const Color(0xffffffff)
-                    )
-                ),
-              ),
-              // Rectangle 573
-              MaterialButton(
-                onPressed: (){},
-                child: Container(
-                  child: // Pay now
-                  Center(
-                    child: Text(
-                        "Pay now",
-                        style: const TextStyle(
-                            color:  const Color(0xffffffff),
-                            fontWeight: FontWeight.w400,
-                            fontFamily: "Cairo",
-                            fontStyle:  FontStyle.normal,
-                            fontSize: 16.0
-                        ),
-                        textAlign: TextAlign.left
-                    ),
-                  ),
-                    width: 257.4888916015625,
-                    height: 39.611328125,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(
-                            Radius.circular(100)
-                        ),
-                        color: const Color(0xff006633)
-                    )
-                ),
-              ),
-              SizedBox(height: 20,),
-              // Rectangle 573
-              MaterialButton(
-                onPressed: (){},
-                child: Container(
-                  child: // Cancel
-                  Center(
-                    child: Text(
-                        "Cancel",
-                        style: const TextStyle(
-                            color:  const Color(0xff006633),
-                            fontWeight: FontWeight.w400,
-                            fontFamily: "Cairo",
-                            fontStyle:  FontStyle.normal,
-                            fontSize: 16.0
-                        ),
-                        textAlign: TextAlign.left
-                    ),
-                  ),
-                    width: 257.4888916015625,
-                    height: 39.611328125,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(
-                            Radius.circular(100)
-                        ),
-                        border: Border.all(
-                            color: const Color(0xff006633),
-                            width: 1
-                        ),
-                        color: const Color(0xffffffff)
-                    )
-                ),
-              )
 
-            ],
-          ),
-          Positioned(
-            left: 50,
-            top: 70,
-            child: Container(
-                child: // Payment Options
-                Center(
-                  child: Text(
-                      "Payment Options",
-                      style: const TextStyle(
-                          color:  const Color(0xffffffff),
-                          fontWeight: FontWeight.w700,
-                          fontFamily: "Cairo",
-                          fontStyle:  FontStyle.normal,
-                          fontSize: 14.0
-                      ),
-                      textAlign: TextAlign.center
                   ),
-                ),
-                width: 285,
-                height: 36,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(
-                        Radius.circular(29)
-                    ),
-                    border: Border.all(
-                        color: const Color(0xffffffff),
-                        width: 2
-                    ),
-                    boxShadow: [BoxShadow(
-                        color: const Color(0x38000000),
-                        offset: Offset(0,3),
-                        blurRadius: 6,
-                        spreadRadius: 0
-                    )] ,
-                    color: const Color(0xff006633)
-                )
+                ],
+              ),
             ),
           ),
+          SizedBox(height: 30,
+          ),
+          // Credit/ Debit Card
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 40),
+            child: Text(
+                "Credit/ Debit Card",
+                style: const TextStyle(
+                    color:  const Color(0xff313131),
+                    fontWeight: FontWeight.w700,
+                    fontFamily: "Cairo",
+                    fontStyle:  FontStyle.normal,
+                    fontSize: 15.0
+                ),
+                textAlign: TextAlign.left,
+            ),
+          ),
+          //principal container
+          CreditCardWidget(
+            cardBgColor:const Color(0xff999966),
+            cardNumber: cardNumber,
+            expiryDate: expiryDate,
+            cardHolderName: cardHolderName,
+            cvvCode: cvvCode,
+            showBackView: isCvvFocused,
+            obscureCardNumber: true,
+            obscureCardCvv: true,
+          ),
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                children: <Widget>[
+                  CreditCardForm(
+                    formKey: formKey,
+                    obscureCvv: true,
+                    obscureNumber: true,
+                    cardNumber: cardNumber,
+                    cvvCode: cvvCode,
+                    cardHolderName: cardHolderName,
+                    expiryDate: expiryDate,
+                    themeColor: Colors.blue,
+                    cardNumberDecoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Number',
+                      hintText: 'XXXX XXXX XXXX XXXX',
+                    ),
+                    expiryDateDecoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Expired Date',
+                      hintText: 'XX/XX',
+                    ),
+                    cvvCodeDecoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'CVV',
+                      hintText: 'XXX',
+                    ),
+                    cardHolderDecoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Card Holder',
+                    ),
+                    onCreditCardModelChange: onCreditCardModelChange,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 70.0),
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(
+                              Radius.circular(100)
+                          ),
+                        ),
+                        primary:const Color(0xff006633),
+                      ),
+                      child: Container(
+                        width: double.infinity,
+                        height:28 ,
+                        margin: const EdgeInsets.all(8),
+                        decoration:BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                                Radius.circular(100)
+                            ),
+                            color: const Color(0xff006633)
+                        ) ,
+                        child: Center(
+                          child: const Text(
+                            'Pay now',
+                            style: TextStyle(
+                              color:  const Color(0xffffffff),
+                              fontWeight: FontWeight.w400,
+                              fontFamily: "Cairo",
+                              fontStyle:  FontStyle.normal,
+                              fontSize: 16.0,
+                            ),
+                          ),
+                        ),
+                      ),
+                      onPressed: () {
+                        if (formKey.currentState!.validate()) {
+                          Navigator.push(context,MaterialPageRoute(builder: (context)=>BoardingPass()),);
+
+                          print('valid!');
+                        } else {
+                          print('invalid!');
+                        }
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+
         ],
       ),
     );
+  }
+  void onCreditCardModelChange(CreditCardModel? creditCardModel) {
+    setState(() {
+      cardNumber = creditCardModel!.cardNumber;
+      expiryDate = creditCardModel.expiryDate;
+      cardHolderName = creditCardModel.cardHolderName;
+      cvvCode = creditCardModel.cvvCode;
+      isCvvFocused = creditCardModel.isCvvFocused;
+    });
   }
 }

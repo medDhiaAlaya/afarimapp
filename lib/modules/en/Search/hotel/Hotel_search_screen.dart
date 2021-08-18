@@ -12,6 +12,36 @@ class HotelSearchScreen extends StatefulWidget {
 }
 
 class _HotelSearchScreenState extends State<HotelSearchScreen> {
+  DateTime chekInDate=DateTime.now();
+  DateTime chekOutDate=DateTime.now();
+  void _chekInDate(){
+    showDatePicker(context: context,
+        initialDate: DateTime.now(),
+        firstDate: DateTime(2021),
+        lastDate: DateTime.now(),
+    ).then((value){
+      if(value== null){return;}
+      else
+       setState(() {
+         chekInDate = value;
+       });
+    }
+    );
+  }
+  void _chekOutDate(){
+    showDatePicker(context: context,
+      initialDate: DateTime.now(),
+      firstDate: DateTime(2021),
+      lastDate: DateTime.now(),
+    ).then((val){
+      if(val== null){return;}
+      else
+        setState(() {
+          chekOutDate = val;
+        });
+    }
+    );
+  }
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -107,8 +137,10 @@ class _HotelSearchScreenState extends State<HotelSearchScreen> {
                       children: [
                         Expanded(
                           child: GestureDetector(
-                            onTap: ()
-                            {
+                            onTap:(){
+                              setState(() {
+                                _chekInDate();
+                              });
                             },
                             child: Container(
                               width: 154,
@@ -125,157 +157,156 @@ class _HotelSearchScreenState extends State<HotelSearchScreen> {
                                   ),
                                   color: const Color(0xffffffff)
                               ),
-                              child: Center(
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child:
+
+
+
+                                Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    SizedBox(width: 10,
-                                    ),
-                                    Text(
-                                        "text",
-                                        style: const TextStyle(
-                                            color:  const Color(0xff313131),
-                                            fontWeight: FontWeight.w700,
-                                            fontFamily: "Cairo",
-                                            fontStyle:  FontStyle.normal,
-                                            fontSize: 18.0,
-                                        ),
-                                        textAlign: TextAlign.center
-                                    ),
-                                    SizedBox(width: 10,
-                                    ),
-                                    Expanded(
-                                      child: RichText(
-                                        text: TextSpan(
-
-                                          children: [
-                                            TextSpan(
-                                                style: const TextStyle(
-                                                    color:  const Color(0xffc4c4c4),
-                                                    fontWeight: FontWeight.w400,
-                                                    fontFamily: "Cairo",
-                                                    fontStyle:  FontStyle.normal,
-                                                    fontSize: 10.0
-                                                ),
-                                                text: "Check-in\n"),
-                                            TextSpan(
-                                                style: const TextStyle(
-                                                    color:  const Color(0xff999966),
-                                                    fontWeight: FontWeight.w700,
-                                                    fontFamily: "Cairo",
-                                                    fontStyle:  FontStyle.normal,
-                                                    fontSize: 14.0
-                                                ),
-                                                text: "text "
-                                            ),
-                                            TextSpan(
-                                                style: const TextStyle(
-                                                    color:  const Color(0xff999966),
-                                                    fontWeight: FontWeight.w400,
-                                                    fontFamily: "Cairo",
-                                                    fontStyle:  FontStyle.normal,
-                                                    fontSize: 14.0
-                                                ),
-                                                text: "text\n"
-                                            ),
-                                            TextSpan(
-                                                style: const TextStyle(
-                                                    color:  const Color(0xff999966),
-                                                    fontWeight: FontWeight.w400,
-                                                    fontFamily: "Cairo",
-                                                    fontStyle:  FontStyle.normal,
-                                                    fontSize: 14.0
-                                                ),
-                                                text: "text"
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: Container(
-                            width: 154,
-                            height: 93,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.only(
-                                  topRight: Radius.circular(5),
-                                  bottomRight: Radius.circular(5),
-
-                                ),
-                                border: Border.all(
-                                    color: const Color(0xff707070),
-                                    width: 0.5
-                                ),
-                                color: const Color(0xffffffff)
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.only(
-                                left: 40,
-                              ),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-
-                                children: [
-                                  SizedBox(width: 10,
-                                  ),
-                                  Text(
-                                      "20",
+                                    Text("${DateFormat.d().format(chekInDate)}",
                                       style: const TextStyle(
                                           color:  const Color(0xff313131),
                                           fontWeight: FontWeight.w700,
                                           fontFamily: "Cairo",
                                           fontStyle:  FontStyle.normal,
-                                          fontSize: 18.0
-                                      ),
-                                      textAlign: TextAlign.center
-                                  ),
-                                  SizedBox(width: 10,
-                                  ),
-                                  Expanded(
-                                    child: RichText(
-                                      text: TextSpan(
-
-                                        children: [
-                                          TextSpan(
-                                              style: const TextStyle(
-                                                  color:  const Color(0xffc4c4c4),
-                                                  fontWeight: FontWeight.w400,
-                                                  fontFamily: "Cairo",
-                                                  fontStyle:  FontStyle.normal,
-                                                  fontSize: 10.0
-                                              ),
-                                              text: "Check-in\n"),
-                                          TextSpan(
-                                              style: const TextStyle(
-                                                  color:  const Color(0xff999966),
-                                                  fontWeight: FontWeight.w700,
-                                                  fontFamily: "Cairo",
-                                                  fontStyle:  FontStyle.normal,
-                                                  fontSize: 14.0
-                                              ),
-                                              text: "Jul 2021\n"),
-
-                                          TextSpan(
-                                              style: const TextStyle(
-                                                  color:  const Color(0xff999966),
-                                                  fontWeight: FontWeight.w400,
-                                                  fontFamily: "Cairo",
-                                                  fontStyle:  FontStyle.normal,
-                                                  fontSize: 14.0
-                                              ),
-                                              text: "Tuesday"),
-                                        ],
+                                          fontSize: 18.0,
                                       ),
                                     ),
+                                    SizedBox(width: 20,),
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        // Check-in
+                                        Text(
+                                            "Check-in",
+                                            style: const TextStyle(
+                                                color:Colors.grey,
+                                                fontWeight: FontWeight.w400,
+                                                fontFamily: "Cairo",
+                                                fontStyle:  FontStyle.normal,
+                                                fontSize: 10.0
+                                            ),
+                                            textAlign: TextAlign.left
+                                        ),
+                                        Text("${DateFormat.yMMM().format(chekInDate)}",
+                                          style: const TextStyle(
+                                              color:  const Color(0xff999966),
+                                              fontWeight: FontWeight.w700,
+                                              fontFamily: "Cairo",
+                                              fontStyle:  FontStyle.normal,
+                                              fontSize: 14.0
+                                          ),),
+                                        Text("${DateFormat.EEEE().format(chekInDate)}",
+                                          style: const TextStyle(
+                                              color:  const Color(0xff999966),
+                                              fontWeight: FontWeight.w400,
+                                              fontFamily: "Cairo",
+                                              fontStyle:  FontStyle.normal,
+                                              fontSize: 14.0
+                                          ),
+                                        ),
+
+
+
+                                      ],
+                                    ),
+                                  ],
+                                ),
+
+
+
+                              ),
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: GestureDetector(
+                            onTap: (){
+                              setState(() {
+                                _chekOutDate();
+                              });
+                            },
+                            child: Container(
+                              width: 154,
+                              height: 93,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.only(
+                                    topRight: Radius.circular(5),
+                                    bottomRight: Radius.circular(5),
+
                                   ),
-                                ],
+                                  border: Border.all(
+                                      color: const Color(0xff707070),
+                                      width: 0.5
+                                  ),
+                                  color: const Color(0xffffffff)
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child:
+
+
+
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text("${DateFormat.d().format(chekOutDate)}",
+                                      style: const TextStyle(
+                                        color:  const Color(0xff313131),
+                                        fontWeight: FontWeight.w700,
+                                        fontFamily: "Cairo",
+                                        fontStyle:  FontStyle.normal,
+                                        fontSize: 18.0,
+                                      ),
+                                    ),
+                                    SizedBox(width: 20,),
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        // Check-in
+                                        Text(
+                                            "Check-in",
+                                            style: const TextStyle(
+                                                color:Colors.grey,
+                                                fontWeight: FontWeight.w400,
+                                                fontFamily: "Cairo",
+                                                fontStyle:  FontStyle.normal,
+                                                fontSize: 10.0
+                                            ),
+                                            textAlign: TextAlign.left
+                                        ),
+                                        Text("${DateFormat.yMMM().format(chekOutDate)}",
+                                          style: const TextStyle(
+                                              color:  const Color(0xff999966),
+                                              fontWeight: FontWeight.w700,
+                                              fontFamily: "Cairo",
+                                              fontStyle:  FontStyle.normal,
+                                              fontSize: 14.0
+                                          ),),
+                                        Text("${DateFormat.EEEE().format(chekOutDate)}",
+                                          style: const TextStyle(
+                                              color:  const Color(0xff999966),
+                                              fontWeight: FontWeight.w400,
+                                              fontFamily: "Cairo",
+                                              fontStyle:  FontStyle.normal,
+                                              fontSize: 14.0
+                                          ),
+                                        ),
+
+
+
+                                      ],
+                                    ),
+                                  ],
+                                ),
+
+
+
                               ),
                             ),
                           ),

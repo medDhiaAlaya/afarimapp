@@ -1,3 +1,4 @@
+import 'package:afarim/modules/en/Search/flight/boarding_pass.dart';
 import 'package:afarim/modules/en/Search/flight/review_your_trip.dart';
 import 'package:flutter/material.dart';
 import 'layers/home_layer.dart';
@@ -10,8 +11,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ReviewYourTrip(),
-      //HomeLayer(),
+      home: //BoardingPass(),
+      // ReviewYourTrip(),
+      HomeLayer(),
       //SplashScreen(),
     );
   }

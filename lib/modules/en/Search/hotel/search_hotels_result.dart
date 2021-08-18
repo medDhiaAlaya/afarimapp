@@ -173,17 +173,46 @@ class _SearchHotelsResultState extends State<SearchHotelsResult> {
                             SizedBox(height: 20,),
                             MaterialButton(
                               onPressed: (){
-                                showDialog(
+                                showGeneralDialog(
+                                  barrierLabel: "Barrier",
+                                  barrierDismissible: true,
+                                  barrierColor: Colors.black.withOpacity(0.5),
+                                  transitionDuration: Duration(milliseconds: 700),
                                   context: context,
-                                  builder: (BuildContext context) {
-                                    return Container(
-                                      color: Colors.red,
-                                      width: double.infinity,
-                                      height: 300,
+                                  pageBuilder: (_, __, ___) {
+                                    return Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: Container(
+                                        height: 500,
+                                        child: ListView(
+                                          shrinkWrap: true,
+                                          children: [
+                                            Row(
+                                              mainAxisSize: MainAxisSize.min,
+                                              children: [
+                                                Icon(Icons.wifi),
+                                                Text('wifi'),
+
+                                              ],
+                                            ),
+
+                                          ],
+                                        ),
+                                        margin: EdgeInsets.only(bottom: 50, left: 20, right: 20),
+                                        decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius: BorderRadius.circular(40),
+                                        ),
+                                      ),
+                                    );
+                                  },
+                                  transitionBuilder: (_, anim, __, child) {
+                                    return SlideTransition(
+                                      position: Tween(begin: Offset(0, 1), end: Offset(0, 0)).animate(anim),
+                                      child: child,
                                     );
                                   },
                                 );
-
                               },
                               child: Container(
                                   child: Row(

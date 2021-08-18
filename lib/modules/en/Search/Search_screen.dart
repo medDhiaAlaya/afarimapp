@@ -72,6 +72,7 @@ class _SearchScreenState extends State<SearchScreen> {
       child: Scaffold(
         backgroundColor: const Color(0xfff7f7f7),
 
+      //  body: ListView(
         body: ListView(
           children: [
             SizedBox(
@@ -259,6 +260,103 @@ class _SearchScreenState extends State<SearchScreen> {
                             SizedBox(
                               height: 20,
                             ),
+                            StaggeredGridView.countBuilder(
+                              shrinkWrap: true,
+                              scrollDirection: Axis.vertical,
+                              physics: ScrollPhysics(),
+                              crossAxisCount: 4,
+                              itemCount: popular.length,
+                              itemBuilder: (BuildContext context, int index) => Stack(
+                                children: [
+                                  ClipRRect(
+                                    child: Image.asset(popular[index]['img'] ?? ''),
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  Positioned(
+                                    bottom: 5,
+                                    left: 10,
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          popular[index]['name']?? '',
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 20,
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Opacity(
+                                            opacity : 0.7099999785423279,
+                                            child:   Container(
+
+                                              child: Padding(
+                                                padding: const EdgeInsets.all(2.0),
+                                                child: Center(
+                                                  child: Row(
+                                                    children: [
+                                                      Icon(Icons.star,
+                                                        color:  const Color(0xfff2bb09),
+                                                        size: 20,
+                                                      ),
+                                                      SizedBox(width: 2,),
+                                                      Text(
+                                                          popular[index]['rate'] ?? '',
+                                                          style: const TextStyle(
+                                                              color:  const Color(0xff313131),
+                                                              fontWeight: FontWeight.w700,
+                                                              fontFamily: "Cairo",
+                                                              fontStyle:  FontStyle.normal,
+                                                              fontSize: 15
+                                                          ),
+                                                          textAlign: TextAlign.center
+                                                      )
+                                                    ],
+                                                  ),
+                                                ),
+                                              ),
+                                              width: 60,
+                                              height: 30,
+                                              decoration: BoxDecoration(
+                                                  borderRadius: BorderRadius.all(
+                                                      Radius.circular(6)
+                                                  ),
+                                                  color: const Color(0xffffffff)
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Positioned(
+                                    top: 1,
+                                    right: 4,
+                                    child:LikeButton(
+                                      likeBuilder: (bool isLiked) {
+                                        return Icon(
+                                          Icons.favorite,
+                                          color: isLiked ? Colors.pinkAccent : Colors.white,
+
+                                        );
+                                      },
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              staggeredTileBuilder: (int index) => new StaggeredTile.fit(2),
+                              mainAxisSpacing: 10,
+                              crossAxisSpacing: 10,
+                            ),
+
+                            ////////////////////////////////////////////////////////////////////////////////// test list view scrolling for suggested list ///
+
+
+
+                            ////////////////////////////////////////////////////////////////////////////////// fin test///
+
                             StaggeredGridView.countBuilder(
                               shrinkWrap: true,
                               scrollDirection: Axis.vertical,

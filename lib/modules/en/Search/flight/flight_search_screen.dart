@@ -1,5 +1,7 @@
 import 'package:afarim/modules/en/Search/flight/flights_results.dart';
+import 'package:afarim/modules/en/Search/hotel/Select_rooms_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 class FlightScreen extends StatefulWidget {
   const FlightScreen({Key? key}) : super(key: key);
 
@@ -8,6 +10,36 @@ class FlightScreen extends StatefulWidget {
 }
 
 class _FlightScreenState extends State<FlightScreen> {
+  DateTime chekInDate=DateTime.now();
+  DateTime chekOutDate=DateTime.now();
+  void _chekInDate(){
+    showDatePicker(context: context,
+      initialDate: DateTime.now(),
+      firstDate: DateTime(2021),
+      lastDate: DateTime.now(),
+    ).then((value){
+      if(value== null){return;}
+      else
+        setState(() {
+          chekInDate = value;
+        });
+    }
+    );
+  }
+  void _chekOutDate(){
+    showDatePicker(context: context,
+      initialDate: DateTime.now(),
+      firstDate: DateTime(2021),
+      lastDate: DateTime.now(),
+    ).then((val){
+      if(val== null){return;}
+      else
+        setState(() {
+          chekOutDate = val;
+        });
+    }
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -243,67 +275,76 @@ class _FlightScreenState extends State<FlightScreen> {
             children: [
               Expanded(
                 child: GestureDetector(
+                  onTap: (){
+                    setState(() {
+                      _chekInDate();
+                    });
+                  },
                   child: Container(
                     child: Center(
                       child: Expanded(
-                        child: Container(
-                          child: Row(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child:
 
+
+
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              SizedBox(width: 10,
-                              ),
-                              Text(
-                                "20",
+                              Text("${DateFormat.d().format(chekInDate)}",
                                 style: const TextStyle(
-                                    color:  const Color(0xff313131),
-                                    fontWeight: FontWeight.w700,
-                                    fontFamily: "Cairo",
-                                    fontStyle:  FontStyle.normal,
-                                    fontSize: 18.0
+                                  color:  const Color(0xff313131),
+                                  fontWeight: FontWeight.w700,
+                                  fontFamily: "Cairo",
+                                  fontStyle:  FontStyle.normal,
+                                  fontSize: 18.0,
                                 ),
-
                               ),
-                              SizedBox(width: 10,
-                              ),
-                              Expanded(
-                                child: RichText(
-                                  text: TextSpan(
-
-                                    children: [
-                                      TextSpan(
-                                          style: const TextStyle(
-                                              color:  const Color(0xffc4c4c4),
-                                              fontWeight: FontWeight.w400,
-                                              fontFamily: "Cairo",
-                                              fontStyle:  FontStyle.normal,
-                                              fontSize: 10.0
-                                          ),
-                                          text: "Check-in\n"),
-                                      TextSpan(
-                                          style: const TextStyle(
-                                              color:  const Color(0xff999966),
-                                              fontWeight: FontWeight.w700,
-                                              fontFamily: "Cairo",
-                                              fontStyle:  FontStyle.normal,
-                                              fontSize: 14.0
-                                          ),
-                                          text: "Jul 2021\n"),
-
-                                      TextSpan(
-                                          style: const TextStyle(
-                                              color:  const Color(0xff999966),
-                                              fontWeight: FontWeight.w400,
-                                              fontFamily: "Cairo",
-                                              fontStyle:  FontStyle.normal,
-                                              fontSize: 14.0
-                                          ),
-                                          text: "Tuesday"),
-                                    ],
+                              SizedBox(width: 20,),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  // Check-in
+                                  Text(
+                                      "Check-in",
+                                      style: const TextStyle(
+                                          color:Colors.grey,
+                                          fontWeight: FontWeight.w400,
+                                          fontFamily: "Cairo",
+                                          fontStyle:  FontStyle.normal,
+                                          fontSize: 10.0
+                                      ),
+                                      textAlign: TextAlign.left
                                   ),
-                                ),
+                                  Text("${DateFormat.yMMM().format(chekInDate)}",
+                                    style: const TextStyle(
+                                        color:  const Color(0xff999966),
+                                        fontWeight: FontWeight.w700,
+                                        fontFamily: "Cairo",
+                                        fontStyle:  FontStyle.normal,
+                                        fontSize: 14.0
+                                    ),),
+                                  Text("${DateFormat.EEEE().format(chekInDate)}",
+                                    style: const TextStyle(
+                                        color:  const Color(0xff999966),
+                                        fontWeight: FontWeight.w400,
+                                        fontFamily: "Cairo",
+                                        fontStyle:  FontStyle.normal,
+                                        fontSize: 14.0
+                                    ),
+                                  ),
+
+
+
+                                ],
                               ),
                             ],
                           ),
+
+
+
                         ),
                       ),
                     ),
@@ -329,68 +370,72 @@ class _FlightScreenState extends State<FlightScreen> {
               ),
               Expanded(
                 child: GestureDetector(
+                  onTap: (){
+                    setState(() {
+                      _chekOutDate();
+                    });
+                  },
                   child: Container(
                     child: Center(
                       child: Container(
                         width: 154,
                         height: 93,
                         child: Center(
-                          child: Row(
-
-                            children: [
-                              SizedBox(width: 10,
-                              ),
-                              Text(
-                                "20",
-                                style: const TextStyle(
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text("${DateFormat.d().format(chekOutDate)}",
+                                  style: const TextStyle(
                                     color:  const Color(0xff313131),
                                     fontWeight: FontWeight.w700,
                                     fontFamily: "Cairo",
                                     fontStyle:  FontStyle.normal,
-                                    fontSize: 18.0
-                                ),
-
-                              ),
-                              SizedBox(width: 10,
-                              ),
-                              Expanded(
-                                child: RichText(
-                                  text: TextSpan(
-
-                                    children: [
-                                      TextSpan(
-                                          style: const TextStyle(
-                                              color:  const Color(0xffc4c4c4),
-                                              fontWeight: FontWeight.w400,
-                                              fontFamily: "Cairo",
-                                              fontStyle:  FontStyle.normal,
-                                              fontSize: 10.0
-                                          ),
-                                          text: "Check-in\n"),
-                                      TextSpan(
-                                          style: const TextStyle(
-                                              color:  const Color(0xff999966),
-                                              fontWeight: FontWeight.w700,
-                                              fontFamily: "Cairo",
-                                              fontStyle:  FontStyle.normal,
-                                              fontSize: 14.0
-                                          ),
-                                          text: "Jul 2021\n"),
-
-                                      TextSpan(
-                                          style: const TextStyle(
-                                              color:  const Color(0xff999966),
-                                              fontWeight: FontWeight.w400,
-                                              fontFamily: "Cairo",
-                                              fontStyle:  FontStyle.normal,
-                                              fontSize: 14.0
-                                          ),
-                                          text: "Tuesday"),
-                                    ],
+                                    fontSize: 18.0,
                                   ),
                                 ),
-                              ),
-                            ],
+                                SizedBox(width: 20,),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    // Check-in
+                                    Text(
+                                        "Check-in",
+                                        style: const TextStyle(
+                                            color:Colors.grey,
+                                            fontWeight: FontWeight.w400,
+                                            fontFamily: "Cairo",
+                                            fontStyle:  FontStyle.normal,
+                                            fontSize: 10.0
+                                        ),
+                                        textAlign: TextAlign.left
+                                    ),
+                                    Text("${DateFormat.yMMM().format(chekOutDate)}",
+                                      style: const TextStyle(
+                                          color:  const Color(0xff999966),
+                                          fontWeight: FontWeight.w700,
+                                          fontFamily: "Cairo",
+                                          fontStyle:  FontStyle.normal,
+                                          fontSize: 14.0
+                                      ),),
+                                    Text("${DateFormat.EEEE().format(chekOutDate)}",
+                                      style: const TextStyle(
+                                          color:  const Color(0xff999966),
+                                          fontWeight: FontWeight.w400,
+                                          fontFamily: "Cairo",
+                                          fontStyle:  FontStyle.normal,
+                                          fontSize: 14.0
+                                      ),
+                                    ),
+
+
+
+                                  ],
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -417,69 +462,74 @@ class _FlightScreenState extends State<FlightScreen> {
             ],
           ),
           SizedBox(
-            height: 20,
+            height: 15,
           ),
-          Container(
-            width: double.infinity,
-            height: 56,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(
-                    Radius.circular(12)
-                ),
-                boxShadow: [BoxShadow(
-                    color: const Color(0x3b000000),
-                    offset: Offset(0,3),
-                    blurRadius: 6,
-                    spreadRadius: 0
-                )] ,
-                color: const Color(0xffffffff)
-            ),
-            child: Row(
-              children: [
-                SizedBox(
-                  width: 10,
-                ),
-                Icon(Icons.male,
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Expanded(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children:[
-                      Text(
-                        "Passengers and cabin class",
-                        style: const TextStyle(
-                            color:  const Color(0xffcccccc),
-                            fontWeight: FontWeight.w400,
-                            fontFamily: "Cairo",
-                            fontStyle:  FontStyle.normal,
-                            fontSize: 10.0
-                        ),
-
-                      ),
-                      Text(
-                        "1 Adult - Economy",
-                        style: const TextStyle(
-                            color:  const Color(0xff313131),
-                            fontWeight: FontWeight.w400,
-                            fontFamily: "Cairo",
-                            fontStyle:  FontStyle.normal,
-                            fontSize: 11.0
-                        ),
-
-                      )
-                    ],
+          GestureDetector(
+            onTap: (){
+              Navigator.push(context,MaterialPageRoute(builder: (context)=>SelectRoomsScreen()),
+              );
+            },
+            child: Container(
+              width: double.infinity,
+              height: 56,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                      Radius.circular(12)
                   ),
-                ),
-              ],
-            ),
+                  boxShadow: [BoxShadow(
+                      color: const Color(0x3b000000),
+                      offset: Offset(0,3),
+                      blurRadius: 6,
+                      spreadRadius: 0
+                  )] ,
+                  color: const Color(0xffffffff)
+              ),
+              child: Row(
+                children: [
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Image(image:AssetImage("icons/room.png")),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Expanded(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children:[
+                        Text(
+                          "Passengers and cabin class",
+                          style: const TextStyle(
+                              color:  const Color(0xffcccccc),
+                              fontWeight: FontWeight.w400,
+                              fontFamily: "Cairo",
+                              fontStyle:  FontStyle.normal,
+                              fontSize: 10.0
+                          ),
 
+                        ),
+                        Text(
+                          "1 Adult - Economy",
+                          style: const TextStyle(
+                              color:  const Color(0xff313131),
+                              fontWeight: FontWeight.w400,
+                              fontFamily: "Cairo",
+                              fontStyle:  FontStyle.normal,
+                              fontSize: 11.0
+                          ),
+
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+
+            ),
           ),
           SizedBox(
-            height: 30,
+            height: 20,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal:50),

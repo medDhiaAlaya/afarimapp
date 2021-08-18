@@ -29,7 +29,6 @@ class _HomeLayerState extends State<HomeLayer> {
       bottomNavigationBar: ConvexAppBar(
         backgroundColor: const Color(0xff006633),
 
-
       style: TabStyle.flip,
       items: [
         TabItem(icon:Icons.home,
