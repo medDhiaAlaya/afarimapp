@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ChangePassword extends StatefulWidget {
   const ChangePassword({Key? key}) : super(key: key);
@@ -16,7 +17,7 @@ class _ChangePasswordState extends State<ChangePassword> {
           elevation: 0,
           title: // Edit profile
           Text(
-              "Change password",
+              AppLocalizations.of(context)!.changePassword,
               style: const TextStyle(
                   color:  const Color(0xffffffff),
                   fontWeight: FontWeight.w700,
@@ -38,7 +39,7 @@ class _ChangePasswordState extends State<ChangePassword> {
               Column(
                 children: <Widget>[
                   Container(
-                    height: 100.0,
+                    height: 110.0,
                     color: Colors.white,
 
                   ),
@@ -63,36 +64,33 @@ class _ChangePasswordState extends State<ChangePassword> {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 30),
                         child: Column(
+                          mainAxisSize: MainAxisSize.min,
                           children: [
                             SizedBox(height: 80,
                             ),
                             // Your password*
-                            Align(
-                              alignment: Alignment.topLeft,
-                              child: RichText(
-                                  text: TextSpan(
-                                      children: [
-                                        TextSpan(
-                                            style: const TextStyle(
-                                                color:  const Color(0xff313131),
-                                                fontWeight: FontWeight.w400,
-                                                fontFamily: "Cairo",
-                                                fontStyle:  FontStyle.normal,
-                                                fontSize: 14.0,
-                                            ),
-                                            text: "Your password"),
-                                        TextSpan(
-                                            style: const TextStyle(
-                                                color:  const Color(0xffd90000),
-                                                fontWeight: FontWeight.w400,
-                                                fontFamily: "Cairo",
-                                                fontStyle:  FontStyle.normal,
-                                                fontSize: 14.0,
-                                            ),
-                                            text: "*"),
-                                      ],
+                            Row(
+                              children: [
+                                Text(
+                                  AppLocalizations.of(context)!.yourPassword,
+                                  style: const TextStyle(
+                                    color:  const Color(0xff313131),
+                                    fontWeight: FontWeight.w400,
+                                    fontFamily: "Cairo",
+                                    fontStyle:  FontStyle.normal,
+                                    fontSize: 14.0,
                                   ),
-                              ),
+                                ),
+                                Text('*',
+                                  style: const TextStyle(
+                                    color:  const Color(0xffd90000),
+                                    fontWeight: FontWeight.w400,
+                                    fontFamily: "Cairo",
+                                    fontStyle:  FontStyle.normal,
+                                    fontSize: 14.0,
+                                ),
+                                ),
+                              ],
                             ),
                             SizedBox(height: 10,
                             ),
@@ -115,32 +113,29 @@ class _ChangePasswordState extends State<ChangePassword> {
                             ),
                             SizedBox(height: 20,
                             ),
-                            Align(
-                              alignment: Alignment.topLeft,
-                              child: RichText(
-                                text: TextSpan(
-                                  children: [
-                                    TextSpan(
-                                        style: const TextStyle(
-                                          color:  const Color(0xff313131),
-                                          fontWeight: FontWeight.w400,
-                                          fontFamily: "Cairo",
-                                          fontStyle:  FontStyle.normal,
-                                          fontSize: 14.0,
-                                        ),
-                                        text: "New password"),
-                                    TextSpan(
-                                        style: const TextStyle(
-                                          color:  const Color(0xffd90000),
-                                          fontWeight: FontWeight.w400,
-                                          fontFamily: "Cairo",
-                                          fontStyle:  FontStyle.normal,
-                                          fontSize: 14.0,
-                                        ),
-                                        text: "*"),
-                                  ],
+
+                            Row(
+                              children: [
+                                Text(
+                                  AppLocalizations.of(context)!.newPassword,
+                                  style: const TextStyle(
+                                    color:  const Color(0xff313131),
+                                    fontWeight: FontWeight.w400,
+                                    fontFamily: "Cairo",
+                                    fontStyle:  FontStyle.normal,
+                                    fontSize: 14.0,
+                                  ),
                                 ),
-                              ),
+                                Text('*',
+                                  style: const TextStyle(
+                                    color:  const Color(0xffd90000),
+                                    fontWeight: FontWeight.w400,
+                                    fontFamily: "Cairo",
+                                    fontStyle:  FontStyle.normal,
+                                    fontSize: 14.0,
+                                  ),
+                                ),
+                              ],
                             ),
                             SizedBox(height: 10,
                             ),
@@ -163,32 +158,28 @@ class _ChangePasswordState extends State<ChangePassword> {
                             ),
                             SizedBox(height: 20,
                             ),
-                            Align(
-                              alignment: Alignment.topLeft,
-                              child: RichText(
-                                text: TextSpan(
-                                  children: [
-                                    TextSpan(
-                                        style: const TextStyle(
-                                          color:  const Color(0xff313131),
-                                          fontWeight: FontWeight.w400,
-                                          fontFamily: "Cairo",
-                                          fontStyle:  FontStyle.normal,
-                                          fontSize: 14.0,
-                                        ),
-                                        text: "Confirm password"),
-                                    TextSpan(
-                                        style: const TextStyle(
-                                          color:  const Color(0xffd90000),
-                                          fontWeight: FontWeight.w400,
-                                          fontFamily: "Cairo",
-                                          fontStyle:  FontStyle.normal,
-                                          fontSize: 14.0,
-                                        ),
-                                        text: "*"),
-                                  ],
+                            Row(
+                              children: [
+                                Text(
+                                 AppLocalizations.of(context)!.confirmPassword,
+                                  style: const TextStyle(
+                                    color:  const Color(0xff313131),
+                                    fontWeight: FontWeight.w400,
+                                    fontFamily: "Cairo",
+                                    fontStyle:  FontStyle.normal,
+                                    fontSize: 14.0,
+                                  ),
                                 ),
-                              ),
+                                Text('*',
+                                  style: const TextStyle(
+                                    color:  const Color(0xffd90000),
+                                    fontWeight: FontWeight.w400,
+                                    fontFamily: "Cairo",
+                                    fontStyle:  FontStyle.normal,
+                                    fontSize: 14.0,
+                                  ),
+                                ),
+                              ],
                             ),
                             SizedBox(height: 10,
                             ),
@@ -209,7 +200,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                                 ),
                               ),
                             ),
-                            SizedBox(height: 30,
+                            SizedBox(height: 20,
                             ),
                             // Rectangle 573
                             MaterialButton(
@@ -218,7 +209,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                                 child: // Save
                                 Center(
                                   child: Text(
-                                      "Save",
+                                      AppLocalizations.of(context)!.save,
                                       style: const TextStyle(
                                           color:  const Color(0xffffffff),
                                           fontWeight: FontWeight.w400,
@@ -243,10 +234,11 @@ class _ChangePasswordState extends State<ChangePassword> {
                             MaterialButton(
                               onPressed: (){},
                               child: Container(
+
                                 child: // Cancel
                                 Center(
                                   child: Text(
-                                      "Cancel",
+                                      AppLocalizations.of(context)!.cancel,
                                       style: const TextStyle(
                                           color:  const Color(0xff006633),
                                           fontWeight: FontWeight.w400,

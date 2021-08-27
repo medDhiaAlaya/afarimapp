@@ -1,6 +1,8 @@
+import 'package:afarim/main.dart';
 import 'package:afarim/modules/en/profile/change_password.dart';
 import 'package:afarim/modules/en/profile/edit_profile.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -11,6 +13,7 @@ class ProfileScreen extends StatefulWidget {
 
 class _ProfileScreenState extends State<ProfileScreen> {
   String? _chosenLanguage;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +22,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         elevation: 0,
         title: Center(
           child: Text(
-            "Profile ",
+            AppLocalizations.of(context)!.profile,
             style: const TextStyle(
                 color:  const Color(0xffffffff),
                 fontWeight: FontWeight.w700,
@@ -98,7 +101,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               top: 160.0, // (background container size) - (circle height / 2)
               child: // Mohamed
               Text(
-                  "Mohamed",
+                  AppLocalizations.of(context)!.name,
                   style: const TextStyle(
                       color:  const Color(0xff313131),
                       fontWeight: FontWeight.w700,
@@ -166,7 +169,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           ),
                           Expanded(
                             child: Text(
-                                "Change password",
+                                AppLocalizations.of(context)!.changePassword,
                                 style: const TextStyle(
                                     color:  const Color(0xff313131),
                                     fontWeight: FontWeight.w600,
@@ -174,7 +177,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     fontStyle:  FontStyle.normal,
                                     fontSize: 15.0
                                 ),
-                                textAlign: TextAlign.left
+                                //textAlign: TextAlign.left
                             ),
                           ),
                           // English
@@ -186,7 +189,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   SizedBox(height: 20,),
                   Container(
                       width: double.infinity,
-                      height: 34,
+                      height: 36,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.all(
                               Radius.circular(3)
@@ -207,7 +210,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         // Languages
                         Expanded(
                           child: Text(
-                              "Languages",
+                              AppLocalizations.of(context)!.languages,
                               style: const TextStyle(
                                   color:  const Color(0xff313131),
                                   fontWeight: FontWeight.w600,
@@ -215,7 +218,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   fontStyle:  FontStyle.normal,
                                   fontSize: 15.0
                               ),
-                              textAlign: TextAlign.left
+                              //textAlign: TextAlign.left
                           ),
                         ),
                         // ---------------------------------choose language
@@ -233,8 +236,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               style: TextStyle(color: Colors.white),
                               iconEnabledColor:Colors.black,
                               items: <String>[
+
                                 'English',
-                                'Arabic',
+                                AppLocalizations.of(context)!.arabic,
 
                               ].map<DropdownMenuItem<String>>((String value) {
                                 return DropdownMenuItem<String>(
@@ -273,7 +277,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           // Languages
                           Expanded(
                             child: Text(
-                                "Terms of use",
+                                AppLocalizations.of(context)!.termsOfUse,
                                 style: const TextStyle(
                                     color:  const Color(0xff313131),
                                     fontWeight: FontWeight.w600,
@@ -281,7 +285,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     fontStyle:  FontStyle.normal,
                                     fontSize: 15.0
                                 ),
-                                textAlign: TextAlign.left
+                                //textAlign: TextAlign.left
                             ),
                           ),
                           Icon(Icons.arrow_forward_ios_sharp),
@@ -308,7 +312,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           // Languages
                           Expanded(
                             child: Text(
-                                "Privacy Policy",
+                                AppLocalizations.of(context)!.privacyPolicy,
                                 style: const TextStyle(
                                     color:  const Color(0xff313131),
                                     fontWeight: FontWeight.w600,
@@ -316,7 +320,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     fontStyle:  FontStyle.normal,
                                     fontSize: 15.0
                                 ),
-                                textAlign: TextAlign.left
+                                //textAlign: TextAlign.left
                             ),
                           ),
                           // English
@@ -347,7 +351,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           // Languages
                           Expanded(
                             child: Text(
-                                "Help",
+                                AppLocalizations.of(context)!.help,
                                 style: const TextStyle(
                                     color:  const Color(0xff313131),
                                     fontWeight: FontWeight.w600,
@@ -355,7 +359,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     fontStyle:  FontStyle.normal,
                                     fontSize: 15.0
                                 ),
-                                textAlign: TextAlign.left
+                                //textAlign: TextAlign.left
                             ),
                           ),
                           Icon(Icons.arrow_forward_ios_sharp),
@@ -382,7 +386,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           // Languages
                           Expanded(
                             child: Text(
-                                "Contact us",
+                                AppLocalizations.of(context)!.contactUs,
+
                                 style: const TextStyle(
                                     color:  const Color(0xff313131),
                                     fontWeight: FontWeight.w600,
@@ -390,7 +395,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     fontStyle:  FontStyle.normal,
                                     fontSize: 15.0
                                 ),
-                                textAlign: TextAlign.left
+                                //textAlign: TextAlign.left
                             ),
                           ),
                           // English
@@ -418,7 +423,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           // Languages
                           Expanded(
                             child: Text(
-                                "About the app",
+                                AppLocalizations.of(context)!.aboutTheApp,
+
                                 style: const TextStyle(
                                     color:  const Color(0xff313131),
                                     fontWeight: FontWeight.w600,
@@ -426,7 +432,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     fontStyle:  FontStyle.normal,
                                     fontSize: 15.0
                                 ),
-                                textAlign: TextAlign.left
+                                //textAlign: TextAlign.left
                             ),
                           ),
                           // English
@@ -471,7 +477,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         ),
                         Expanded(
                           child: Text(
-                              "Sign Out",
+                              AppLocalizations.of(context)!.signOut,
                               style: const TextStyle(
                                   color:  const Color(0xff313131),
                                   fontWeight: FontWeight.w600,
@@ -479,7 +485,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   fontStyle:  FontStyle.normal,
                                   fontSize: 15.0
                               ),
-                              textAlign: TextAlign.left
+                              //textAlign: TextAlign.left
                           ),
                         ),
                         // English
@@ -494,7 +500,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   Container(
 
                       width: double.infinity,
-                      height: 56,
+                      height: 75,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.all(
                               Radius.circular(3)
@@ -518,7 +524,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               ),
                               // follow us on
                               Text(
-                                  "follow us on",
+                                  AppLocalizations.of(context)!.followUsOn,
                                   style: const TextStyle(
                                       color:  const Color(0xff006633),
                                       fontWeight: FontWeight.w900,
@@ -533,7 +539,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               ),
                               // Social Media
                               Text(
-                                  "Social Media",
+                                  AppLocalizations.of(context)!.socialMedia,
+
                                   style: const TextStyle(
                                       color:  const Color(0xff37538f),
                                       fontWeight: FontWeight.w300,

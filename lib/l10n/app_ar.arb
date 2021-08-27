@@ -1,0 +1,333 @@
+{
+  "topInternationalCityGuides": "دليلك لأشهر الوجهات السياحية العالمية",
+  "@topInternationalCityGuides": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "istanbul": "اسطنبول",
+  "@istanbul": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "home": "الرئيسية",
+  "@home": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "search": "بحث",
+  "@search": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "booking": "حجوزاتي",
+  "@booking": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "favorite": "المفضلة",
+  "@favorite": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "profile": "حسابي",
+  "@profile": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "name": "اسم",
+  "@name": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "changePassword": "تغيير كلمة المرور",
+  "@changePassword": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "languages": "اللغة",
+  "@languages": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "arabic": "العربية",
+  "@arabic": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "termsOfUse": "تعليمات الاستخدام",
+  "@termsOfUse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "privacyPolicy": "سياسة الخصوصية",
+  "@privacyPolicy": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "help": "مساعدة",
+  "@help": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "contactUs": "تواصل معنا",
+  "@contactUs": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aboutTheApp": "حول التطبيق",
+  "@aboutTheApp": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "signOut": "تسجيل الخروج",
+  "@signOut": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "followUsOn": "تابعنا على",
+  "@followUsOn": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "socialMedia": "وسائل التواصل الاجتماعي",
+  "@socialMedia": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "yourPassword": "كلمة المرور",
+  "@yourPassword": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "newPassword": "كلمة المرور الجديدة",
+  "@newPassword": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "confirmPassword": "كلمة المرور الجديدة",
+  "@confirmPassword": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "save": "حفظ",
+  "@save": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "cancel": "إلغاء",
+  "@cancel": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "gender": "الجنس",
+  "@gender": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "firstName": "الاسم",
+  "@firstName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "lastName": "اللقب",
+  "@lastName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "email": "البريد الإلكتروني",
+  "@email": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "countryCode": "رمز الدولة",
+  "@countryCode": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "mobileNumber": "رقم الهاتف",
+  "@mobileNumber": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "address": "العنوان",
+  "@address": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "editProfile": "تعديل الحساب",
+  "@editProfile": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "bestHotels": "أفضل الفنادق",
+  "@bestHotels": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "bestCountries": "بلدانك المفضلة",
+  "@bestCountries": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "seeAll": "اظهار الكل",
+  "@seeAll": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "findYourBestHotel": "ابحث عن أفضل الفنادق",
+  "@findYourBestHotel": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "findYourBestCountries": "ابحث عن أفضل البلدان",
+  "@findYourBestCountries": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "cancelled": "الملغاة",
+  "@cancelled": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "past": "السابقة",
+  "@past": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "upComing": "القادمة",
+  "@upComing": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "bookAgain": "احجز مرة أخرى",
+  "@bookAgain": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "night": "الليلة/",
+  "@night": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "getInspired": "اشعل حماسك \n لمغامرتك القادمة",
+  "@getInspired": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "searchHere": "بحث...",
+  "@searchHere": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "flight": "طيران",
+  "@flight": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "hotel": "فنادق",
+  "@hotel": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectCountry": "حدد الدولة",
+  "@selectCountry": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "roomsAndPassengers": "غرفة واحدة",
+  "@roomsAndPassengers": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "citySearch": "وجهة, فندق , اسم أو عنوان",
+  "@citySearch": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "favoriteDestinations": "الوجهات المفضلة",
+  "@favoriteDestinations": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectRoomsAndGuests": "حدد الغرف والضيوف",
+  "@selectRoomsAndGuests": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "room": "الغرف",
+  "@room": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "howMany": "كم عدد",
+  "@howMany": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "adult": "الكبار",
+  "@adult": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "above12years": "فوق 12 سنة",
+  "@above12years": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "child": "أطفال",
+  "@child": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "childYears": "12-2 سنة",
+  "@childYears": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "infant": "رضيع",
+  "@infant": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "below2Years": "أقل من سنتين",
+  "@below2Years": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "apply": "تأكيد",
+  "@apply": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "show": "إظهار",
+  "@show": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "filter": "اختر الفلتر الخاص بك",
+  "@filter": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "budget": "الميزانية",
+  "@budget": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "hotelClass": "فئة الفندق",
+  "@hotelClass": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "facilities": "تجهيزات",
+  "@facilities": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reset": "تجهيزات",
+  "@reset": {
+    "type": "text",
+    "placeholders": {}
+  }
+
+}

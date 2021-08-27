@@ -1,6 +1,7 @@
 import 'package:afarim/modules/en/favorite/best_countries.dart';
 import 'package:afarim/modules/en/favorite/best_hotels.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class FavoriteScreen extends StatefulWidget {
   const FavoriteScreen({Key? key}) : super(key: key);
@@ -28,16 +29,21 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
             indicatorColor: Colors.white,
 
             tabs: [
-              Tab(text:'Best Countries',
+              Tab(text:
+              AppLocalizations.of(context)!.bestCountries,
 
               ),
-              Tab(text:'Best Hotels',
+              Tab(text:
+              AppLocalizations.of(context)!.bestHotels,
+
 
               ),
 
             ],
           ),
-          title: Center(child: Text('Favorite')),
+          title: Center(child: Text(
+              AppLocalizations.of(context)!.favorite,
+          )),
         ),
         body: TabBarView(
           children: [

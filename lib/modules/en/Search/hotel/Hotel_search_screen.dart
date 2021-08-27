@@ -3,6 +3,8 @@ import 'package:afarim/modules/en/Search/hotel/hotels_screen.dart';
 import 'package:afarim/modules/en/Search/hotel/search_hotels_result.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class HotelSearchScreen extends StatefulWidget {
   const HotelSearchScreen({Key? key}) : super(key: key);
@@ -101,7 +103,7 @@ class _HotelSearchScreenState extends State<HotelSearchScreen> {
                         ),
                         Expanded(
                           child: Text(
-                            "Select country,city",
+                            AppLocalizations.of(context)!.selectCountry,
                             style: const TextStyle(
                                 color:  const Color(0xff313131),
                                 fontWeight: FontWeight.w400,
@@ -109,7 +111,7 @@ class _HotelSearchScreenState extends State<HotelSearchScreen> {
                                 fontStyle:  FontStyle.normal,
                                 fontSize: 13.0
                             ),
-                            textAlign: TextAlign.left,
+                            //textAlign: TextAlign.left,
                           ),
                         ),
                         Icon(Icons.arrow_forward_ios_sharp,
@@ -368,7 +370,7 @@ class _HotelSearchScreenState extends State<HotelSearchScreen> {
                         ),
                         Expanded(
                           child: Text(
-                            "1 Room  2 Passengers",
+                            AppLocalizations.of(context)!.roomsAndPassengers,
                             style: const TextStyle(
                                 color:  const Color(0xff313131),
                                 fontWeight: FontWeight.w400,
@@ -376,7 +378,7 @@ class _HotelSearchScreenState extends State<HotelSearchScreen> {
                                 fontStyle:  FontStyle.normal,
                                 fontSize: 13.0
                             ),
-                            textAlign: TextAlign.left,
+                            //textAlign: TextAlign.left,
                           ),
                         ),
                         Icon(Icons.arrow_forward_ios_sharp,
@@ -400,7 +402,7 @@ class _HotelSearchScreenState extends State<HotelSearchScreen> {
                       },
                       child: Center(
                         child: Text(
-                          "Search",
+                          AppLocalizations.of(context)!.search,
                           style: const TextStyle(
                               color:  const Color(0xffffffff),
                               fontWeight: FontWeight.w400,

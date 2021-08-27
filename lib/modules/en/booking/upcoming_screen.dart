@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:like_button/like_button.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class UpcomingScreen extends StatefulWidget {
   const UpcomingScreen({Key? key}) : super(key: key);
@@ -248,7 +249,7 @@ class _UpcomingScreenState extends State<UpcomingScreen> {
                                       ),
                                       // /night
                                       Text(
-                                          "/night",
+                                          AppLocalizations.of(context)!.night,
                                           style: const TextStyle(
                                               color:  const Color(0xff313131),
                                               fontWeight: FontWeight.w700,
@@ -267,7 +268,7 @@ class _UpcomingScreenState extends State<UpcomingScreen> {
                                     child:// Book again
                                     Center(
                                       child: Text(
-                                          "Book again",
+                                          AppLocalizations.of(context)!.bookAgain,
                                           style: const TextStyle(
                                               color:  const Color(0xffffffff),
                                               fontWeight: FontWeight.w700,

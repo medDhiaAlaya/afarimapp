@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:like_button/like_button.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 
 class SearchScreen extends StatefulWidget {
@@ -24,7 +25,7 @@ class _SearchScreenState extends State<SearchScreen> {
   List<Map<String, String>> popular = [
     {
       'img': 'icons/backgroun_home.jpg',
-      "name": 'Rain Forest',
+      "name":'RainForest',
       "rate": '4.5'
     },
     {
@@ -102,7 +103,8 @@ class _SearchScreenState extends State<SearchScreen> {
                         ),
                         filled: true,
                         fillColor: Colors.grey[300],
-                        hintText: 'Search here...',
+                        hintText:
+                        AppLocalizations.of(context)!.searchHere,
                         contentPadding: EdgeInsets.symmetric(vertical: 9),
                       ),
                     ),
@@ -150,7 +152,7 @@ class _SearchScreenState extends State<SearchScreen> {
                             SizedBox(height: 20,
                             ),
                             Text(
-                                "Hotel",
+                                AppLocalizations.of(context)!.hotel,
                                 style: const TextStyle(
                                     color:  const Color(0xff313131),
                                     fontWeight: FontWeight.w700,
@@ -200,7 +202,7 @@ class _SearchScreenState extends State<SearchScreen> {
                             SizedBox(height: 20,
                             ),
                             Text(
-                                "Flight",
+                                AppLocalizations.of(context)!.flight,
                                 style: const TextStyle(
                                     color:  const Color(0xff313131),
                                     fontWeight: FontWeight.w700,
@@ -230,7 +232,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                 Expanded(
                                   flex: 6,
                                   child: Text(
-                                    "Find your best hotel",
+                                    AppLocalizations.of(context)!.findYourBestHotel,
                                     style: const TextStyle(
                                         color:  const Color(0xff313131),
                                         fontWeight: FontWeight.w700,
@@ -238,12 +240,13 @@ class _SearchScreenState extends State<SearchScreen> {
                                         fontStyle:  FontStyle.normal,
                                         fontSize: 13.0
                                     ),
-                                    textAlign: TextAlign.left,
+                                    //textAlign: TextAlign.left,
                                   ),
                                 ),
                                 TextButton(
 
-                                  child: Text("See all",
+                                  child: Text(
+                                    AppLocalizations.of(context)!.seeAll,
                                     style: const TextStyle(
                                         color:  const Color(0xff999966),
                                         fontWeight: FontWeight.w700,

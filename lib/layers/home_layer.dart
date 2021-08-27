@@ -5,6 +5,8 @@ import 'package:afarim/modules/en/home/home_screen.dart';
 import 'package:afarim/modules/en/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 class HomeLayer extends StatefulWidget {
   const HomeLayer({Key? key}) : super(key: key);
 
@@ -32,15 +34,26 @@ class _HomeLayerState extends State<HomeLayer> {
       style: TabStyle.flip,
       items: [
         TabItem(icon:Icons.home,
-        title: 'Home'),
+        title:
+        AppLocalizations.of(context)!.home,
+        ),
         TabItem(icon: Icons.search,
-        title:'Search' ),
+        title:
+        AppLocalizations.of(context)!.search,
+        ),
         TabItem(icon:Icons.calendar_today_outlined,
-        title: 'Booking'),
+        title:
+        AppLocalizations.of(context)!.booking,
+        ),
         TabItem(icon: Icons.favorite_border,
-        title:'favorite'),
+        title:
+        AppLocalizations.of(context)!.favorite,
+        ),
         TabItem(icon: Icons.account_circle_outlined,
-        title: 'Profile'),
+        title:
+        AppLocalizations.of(context)!.profile,
+
+           ),
       ],
       initialActiveIndex: 0,
         onTap: (index){

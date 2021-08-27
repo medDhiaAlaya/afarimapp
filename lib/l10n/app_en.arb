@@ -1,0 +1,332 @@
+{
+  "topInternationalCityGuides": "Top international city guides",
+  "@topInternationalCityGuides": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "istanbul": "Istanbul",
+  "@istanbul": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "home": "Home",
+  "@home": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "search": "Search",
+  "@search": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "booking": "Booking",
+  "@booking": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "favorite": "Favorite",
+  "@favorite": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "profile": "Profile",
+  "@profile": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "name": "name",
+  "@name": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "changePassword": "Change Password",
+  "@changePassword": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "languages": "Languages",
+  "@languages": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "arabic": "Arabic",
+  "@arabic": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "termsOfUse": "Terms of use",
+  "@termsOfUse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "privacyPolicy": "Privacy Policy",
+  "@privacyPolicy": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "help": "Help",
+  "@help": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "contactUs": "Contact us",
+  "@contactUs": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aboutTheApp": "About the app",
+  "@aboutTheApp": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "signOut": "Sing Out",
+  "@signOut": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "followUsOn": "follow us on",
+  "@followUsOn": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "socialMedia": "Social Media",
+  "@socialMedia": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "yourPassword": "Your password",
+  "@yourPassword": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "newPassword": "New password",
+  "@newPassword": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "confirmPassword": "Confirm password",
+  "@confirmPassword": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "save": "Save",
+  "@save": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "cancel": "Cancel",
+  "@cancel": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "gender": "Gender",
+  "@gender": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "firstName": "First Name",
+  "@firstName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "lastName": "Last Name",
+  "@lastName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "email": "Email",
+  "@email": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "countryCode": "Country Code",
+  "@countryCode": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "mobileNumber": "Mobile Number",
+  "@mobileNumber": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "address": "Address",
+  "@address": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "editProfile": "Edit Profile",
+  "@editProfile": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "bestHotels": "Best Hotels",
+  "@bestHotels": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "bestCountries": "Best Countries",
+  "@bestCountries": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "seeAll": "See all",
+  "@seeAll": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "findYourBestHotel": "Find Your best Hotel",
+  "@findYourBestHotel": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "findYourBestCountries": "Find your best Countries",
+  "@findYourBestCountries": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "cancelled": "Cancelled",
+  "@cancelled": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "past": "Past",
+  "@past": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "upComing": "Upcoming",
+  "@upComing": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "bookAgain": "Book again",
+  "@bookAgain": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "night": "/night",
+  "@night": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "getInspired": "Get inspired \n for your next adventure",
+  "@getInspired": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "searchHere": "Search here...",
+  "@searchHere": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "flight": "Flight",
+  "@flight": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "hotel": "hotel",
+  "@hotel": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectCountry": "Select country,city",
+  "@selectCountry": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "roomsAndPassengers": "1 Room  2 Passengers",
+  "@roomsAndPassengers": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "citySearch": "City, airport or specific hotels",
+  "@citySearch": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "favoriteDestinations": "Favorite Destinations",
+  "@favoriteDestinations": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectRoomsAndGuests": "Select rooms and guests ",
+  "@selectRoomsAndGuests": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "room": "Room",
+  "@room": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "howMany": "How many",
+  "@howMany": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "adult": "Adult",
+  "@adult": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "above12years": "Above 12 Years",
+  "@above12years": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "child": "Child",
+  "@child": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "childYears": "2 - 12 Years",
+  "@childYears": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "infant": "Infant",
+  "@infant": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "below2Years": "Below 2 Years",
+  "@below2Years": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "apply": "Apply",
+  "@apply": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "show": "Show",
+  "@show": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "filter": "Choose Your Filter",
+  "@filter": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "budget": "Budget",
+  "@budget": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "hotelClass": "Hotel Class",
+  "@hotelClass": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "facilities": "Facilities",
+  "@facilities": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reset": "Reset",
+  "@reset": {
+    "type": "text",
+    "placeholders": {}
+  }
+}

@@ -1,7 +1,8 @@
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -32,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             Expanded(
               child: Text(
-                  "Get inspired \n for your next adventure",
+                  AppLocalizations.of(context)!.getInspired,
                   style: const TextStyle(
                       color:  const Color(0xffffffff),
                       fontWeight: FontWeight.w700,
@@ -104,7 +105,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 right: 10,
               ),
               child: Text(
-                  "Istanbul",
+                  AppLocalizations.of(context)!.istanbul,
                   style: const TextStyle(
                       color:  const Color(0xffffffff),
                       fontWeight: FontWeight.w700,
@@ -132,7 +133,8 @@ class _HomeScreenState extends State<HomeScreen> {
     children: <Widget>[
       SizedBox(height: 10,
       ),
-      Text("Top international city guides",
+      Text(
+        AppLocalizations.of(context)!.topInternationalCityGuides,
         textAlign: TextAlign.left,
         style: const TextStyle(
             color:  const Color(0xff313131),
@@ -177,7 +179,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       right: 10,
                     ),
                     child: Text(
-                        "Istanbul",
+                        AppLocalizations.of(context)!.istanbul,
                         style: const TextStyle(
                             color:  const Color(0xffffffff),
                             fontWeight: FontWeight.w700,

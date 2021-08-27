@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:like_button/like_button.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class BestHotels extends StatefulWidget {
   const BestHotels({Key? key}) : super(key: key);
@@ -70,7 +72,7 @@ class _BestHotelsState extends State<BestHotels> {
                     Expanded(
                       flex: 6,
                       child: Text(
-                        'Find your best Hotel',
+                        AppLocalizations.of(context)!.findYourBestHotel,
                         style: const TextStyle(
                             color:  const Color(0xff313131),
                             fontWeight: FontWeight.w700,
@@ -78,12 +80,13 @@ class _BestHotelsState extends State<BestHotels> {
                             fontStyle:  FontStyle.normal,
                             fontSize: 13.0
                         ),
-                        textAlign: TextAlign.left,
+                        //textAlign: TextAlign.left,
                       ),
                     ),
                     TextButton(
 
-                      child: Text("See all",
+                      child: Text(
+                        AppLocalizations.of(context)!.seeAll,
                         style: const TextStyle(
                             color:  const Color(0xff999966),
                             fontWeight: FontWeight.w700,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HotelsScreen extends StatefulWidget {
   const HotelsScreen({Key? key}) : super(key: key);
@@ -63,7 +64,7 @@ class _HotelsScreenState extends State<HotelsScreen> {
           padding: const EdgeInsets.only(right: 50),
           child: Center(
             child: Text(
-                "Hotels",
+              AppLocalizations.of(context)!.hotel,
                 style: const TextStyle(
                     color:  const Color(0xffffffff),
                     fontWeight: FontWeight.w700,
@@ -112,7 +113,8 @@ class _HotelsScreenState extends State<HotelsScreen> {
                           ),
                           filled: true,
                           fillColor: Colors.grey[300],
-                          hintText: 'City, airport or specific hotels',
+                          hintText:
+                          AppLocalizations.of(context)!.citySearch,
                           contentPadding: EdgeInsets.symmetric(vertical: 9),
                         ),
                       ),
@@ -120,7 +122,7 @@ class _HotelsScreenState extends State<HotelsScreen> {
                   ),
                   MaterialButton(onPressed: (){},
                   child: Text(
-                      "Cancel",
+                      AppLocalizations.of(context)!.cancel,
                       style: const TextStyle(
                           color:  const Color(0xfff9f8fb),
                           fontWeight: FontWeight.w700,
@@ -141,10 +143,11 @@ class _HotelsScreenState extends State<HotelsScreen> {
           ),
           // Favorite Destinations
           Padding(
-            padding: const EdgeInsets.only(left:10),
+            padding: const EdgeInsets.only(left:10,right: 10),
             child: Text(
-                "Favorite Destinations",
-              textAlign: TextAlign.left,
+              AppLocalizations.of(context)!.favoriteDestinations,
+
+              //textAlign: TextAlign.left,
                 style: const TextStyle(
                     color:  const Color(0xff313131),
                     fontWeight: FontWeight.w700,

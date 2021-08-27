@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SelectRoomsScreen extends StatefulWidget {
   const SelectRoomsScreen({Key? key}) : super(key: key);
@@ -23,7 +24,8 @@ class _SelectRoomsScreenState extends State<SelectRoomsScreen> {
           padding: const EdgeInsets.only(right: 50),
           child: Center(
             child: Text(
-              "Select rooms and guests ",
+              AppLocalizations.of(context)!.selectRoomsAndGuests,
+
               style: const TextStyle(
                   color:  const Color(0xffffffff),
                   fontWeight: FontWeight.w700,
@@ -46,7 +48,7 @@ class _SelectRoomsScreenState extends State<SelectRoomsScreen> {
             SizedBox(height: 30,
             ),
             Text(
-                "Select rooms and guests ",
+              AppLocalizations.of(context)!.selectRoomsAndGuests,
                 style: const TextStyle(
                     color:  const Color(0xff313131),
                     fontWeight: FontWeight.w700,
@@ -54,7 +56,7 @@ class _SelectRoomsScreenState extends State<SelectRoomsScreen> {
                     fontStyle:  FontStyle.normal,
                     fontSize: 13.0
                 ),
-                textAlign: TextAlign.left,
+                //textAlign: TextAlign.left,
             ),
             SizedBox(height: 30,
             ),
@@ -62,7 +64,7 @@ class _SelectRoomsScreenState extends State<SelectRoomsScreen> {
             Container(
 
                 width: double.infinity,
-                height: 82,
+                height: 100,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(
                         Radius.circular(6)
@@ -96,7 +98,7 @@ class _SelectRoomsScreenState extends State<SelectRoomsScreen> {
                           children: [
                             // How many
                             Text(
-                                "How many",
+                              AppLocalizations.of(context)!.howMany,
                                 style: const TextStyle(
                                     color:  const Color(0xffc4c4c4),
                                     fontWeight: FontWeight.w400,
@@ -107,7 +109,7 @@ class _SelectRoomsScreenState extends State<SelectRoomsScreen> {
                             ),
                             // Room
                             Text(
-                                "Room",
+                              AppLocalizations.of(context)!.room,
                                 style: const TextStyle(
                                     color:  const Color(0xff006633),
                                     fontWeight: FontWeight.w400,
@@ -167,7 +169,7 @@ class _SelectRoomsScreenState extends State<SelectRoomsScreen> {
             // Rectangle 686
             Container(
                 width: double.infinity,
-                height: 250,
+                height: 300,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(
                         Radius.circular(6)
@@ -203,7 +205,7 @@ class _SelectRoomsScreenState extends State<SelectRoomsScreen> {
                               children: [
                                 // How many
                                 Text(
-                                  "Above 12 Years",
+                                  AppLocalizations.of(context)!.above12years,
                                   style: const TextStyle(
                                       color:  const Color(0xffc4c4c4),
                                       fontWeight: FontWeight.w400,
@@ -214,7 +216,7 @@ class _SelectRoomsScreenState extends State<SelectRoomsScreen> {
                                 ),
                                 // Room
                                 Text(
-                                  "Adult",
+                                  AppLocalizations.of(context)!.adult,
                                   style: const TextStyle(
                                       color:  const Color(0xff006633),
                                       fontWeight: FontWeight.w400,
@@ -286,7 +288,8 @@ class _SelectRoomsScreenState extends State<SelectRoomsScreen> {
                               children: [
                                 // How many
                                 Text(
-                                  "2 - 12 Years",
+                                  AppLocalizations.of(context)!.childYears,
+
                                   style: const TextStyle(
                                       color:  const Color(0xffc4c4c4),
                                       fontWeight: FontWeight.w400,
@@ -297,7 +300,7 @@ class _SelectRoomsScreenState extends State<SelectRoomsScreen> {
                                 ),
                                 // Room
                                 Text(
-                                  "Child",
+                                  AppLocalizations.of(context)!.child,
                                   style: const TextStyle(
                                       color:  const Color(0xff006633),
                                       fontWeight: FontWeight.w400,
@@ -369,7 +372,7 @@ class _SelectRoomsScreenState extends State<SelectRoomsScreen> {
                               children: [
                                 // How many
                                 Text(
-                                  "Below 2 Years",
+                                  AppLocalizations.of(context)!.below2Years,
                                   style: const TextStyle(
                                       color:  const Color(0xffc4c4c4),
                                       fontWeight: FontWeight.w400,
@@ -380,7 +383,7 @@ class _SelectRoomsScreenState extends State<SelectRoomsScreen> {
                                 ),
                                 // Room
                                 Text(
-                                  "Infant",
+                                  AppLocalizations.of(context)!.infant,
                                   style: const TextStyle(
                                       color:  const Color(0xff006633),
                                       fontWeight: FontWeight.w400,
@@ -444,7 +447,8 @@ class _SelectRoomsScreenState extends State<SelectRoomsScreen> {
                 child: // Apply
                 Center(
                   child: Text(
-                      "Apply",
+                      AppLocalizations.of(context)!.apply,
+
                       style: const TextStyle(
                           color:  const Color(0xffffffff),
                           fontWeight: FontWeight.w400,

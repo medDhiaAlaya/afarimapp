@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:like_button/like_button.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class BestCountries extends StatefulWidget {
   const BestCountries({Key? key}) : super(key: key);
@@ -70,7 +72,7 @@ class _BestCountriesState extends State<BestCountries> {
                     Expanded(
                       flex: 6,
                       child: Text(
-                        'Find your best Countries',
+                        AppLocalizations.of(context)!.findYourBestCountries,
                         style: const TextStyle(
                             color:  const Color(0xff313131),
                             fontWeight: FontWeight.w700,
@@ -78,12 +80,13 @@ class _BestCountriesState extends State<BestCountries> {
                             fontStyle:  FontStyle.normal,
                             fontSize: 13.0
                         ),
-                        textAlign: TextAlign.left,
+                        //textAlign: TextAlign.left,
                       ),
                     ),
                     TextButton(
 
-                      child: Text("See all",
+                      child: Text(
+                        AppLocalizations.of(context)!.seeAll,
                         style: const TextStyle(
                             color:  const Color(0xff999966),
                             fontWeight: FontWeight.w700,

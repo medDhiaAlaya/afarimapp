@@ -2,6 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:country_list_pick/country_list_pick.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:country_code_picker/country_code_picker.dart';
+import 'package:country_code_picker/country_code_picker.dart';
+import 'package:country_code_picker/country_localizations.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 class EditProfile extends StatefulWidget {
   const EditProfile({Key? key}) : super(key: key);
@@ -23,7 +29,7 @@ class _EditProfileState extends State<EditProfile> {
         elevation: 0,
         title: // Edit profile
         Text(
-            "Edit profile ",
+            AppLocalizations.of(context)!.editProfile,
             style: const TextStyle(
                 color:  const Color(0xffffffff),
                 fontWeight: FontWeight.w700,
@@ -53,7 +59,7 @@ class _EditProfileState extends State<EditProfile> {
                     padding: const EdgeInsets.symmetric(horizontal:30),
                     child: Container(
                         width: double.infinity,
-                        height: 700,
+                        height: 1000,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.all(
                               Radius.circular(6)
@@ -86,7 +92,10 @@ class _EditProfileState extends State<EditProfile> {
                                               fontStyle:  FontStyle.normal,
                                               fontSize: 12.0
                                           ),
-                                          text: "Gender"),
+                                          text:
+                                          AppLocalizations.of(context)!.gender,
+
+                                      ),
                                       TextSpan(
                                           style: const TextStyle(
                                               color:  const Color(0xffd90000),
@@ -165,7 +174,9 @@ class _EditProfileState extends State<EditProfile> {
                                               fontStyle:  FontStyle.normal,
                                               fontSize: 14.0
                                           ),
-                                          text: "First Name"),
+                                          text:
+                                          AppLocalizations.of(context)!.firstName,
+                                          ),
                                       TextSpan(
                                           style: const TextStyle(
                                               color:  const Color(0xffd90000),
@@ -215,7 +226,9 @@ class _EditProfileState extends State<EditProfile> {
                                               fontStyle:  FontStyle.normal,
                                               fontSize: 14.0
                                           ),
-                                          text: "Last Name"),
+                                          text:
+                                          AppLocalizations.of(context)!.lastName,
+                                      ),
                                       TextSpan(
                                           style: const TextStyle(
                                               color:  const Color(0xffd90000),
@@ -255,7 +268,7 @@ class _EditProfileState extends State<EditProfile> {
                             SizedBox(height: 10,
                             ),
                             Text(
-                                "Email",
+                                AppLocalizations.of(context)!.email,
                                 style: const TextStyle(
                                     color:  const Color(0xff313131),
                                     fontWeight: FontWeight.w400,
@@ -304,7 +317,9 @@ class _EditProfileState extends State<EditProfile> {
                                                     fontStyle:  FontStyle.normal,
                                                     fontSize: 14.0
                                                 ),
-                                                text: "Country Code"),
+                                                text:
+                                                AppLocalizations.of(context)!.countryCode,
+                                            ),
                                             TextSpan(
                                                 style: const TextStyle(
                                                     color:  const Color(0xffd90000),
@@ -330,7 +345,9 @@ class _EditProfileState extends State<EditProfile> {
                                                     fontStyle:  FontStyle.normal,
                                                     fontSize: 14.0
                                                 ),
-                                                text: "Mobile Number"),
+                                                text:
+                                                AppLocalizations.of(context)!.mobileNumber,
+                                            ),
                                             TextSpan(
                                                 style: const TextStyle(
                                                     color:  const Color(0xffd90000),
@@ -348,12 +365,21 @@ class _EditProfileState extends State<EditProfile> {
 
                               ],
                             ),
-                            //-------------------------------
-                            SizedBox(height: 5,
-                            ),
                             Row(
+                              mainAxisSize: MainAxisSize.min,
                               children: [
-                                //------------country code
+                                CountryCodePicker(
+                                  padding: EdgeInsets.all(0),
+                                  onChanged: print,
+                                  // Initial selection and favorite can be one of code ('IT') OR dial_code('+39')
+                                  initialSelection: 'SA',
+                                  favorite: ['+966', 'SA'],
+                                  showFlagDialog: true,
+                                  comparator: (a, b) => b.name!.compareTo(a.name!),
+                                  //Get the country information relevant to the initial selection
+                                  onInit: (code) =>
+                                      print("on init ${code!.name} ${code.dialCode} ${code.name}"),
+                                ),
                                 SizedBox(width: 5,),
                                 Expanded(
                                   child: Container(
@@ -392,7 +418,9 @@ class _EditProfileState extends State<EditProfile> {
                                               fontStyle:  FontStyle.normal,
                                               fontSize: 14.0
                                           ),
-                                          text: "Address"),
+                                          text:
+                                          AppLocalizations.of(context)!.address,
+                                      ),
                                       TextSpan(
                                           style: const TextStyle(
                                               color:  const Color(0xffd90000),
@@ -436,7 +464,7 @@ class _EditProfileState extends State<EditProfile> {
                                   child: // Save
                                   Center(
                                     child: Text(
-                                        "Save",
+                                        AppLocalizations.of(context)!.save,
                                         style: const TextStyle(
                                             color:  const Color(0xffffffff),
                                             fontWeight: FontWeight.w400,
@@ -463,7 +491,7 @@ class _EditProfileState extends State<EditProfile> {
                                   child: // Cancel
                                   Center(
                                     child: Text(
-                                        "Cancel",
+                                        AppLocalizations.of(context)!.cancel,
                                         style: const TextStyle(
                                             color:  const Color(0xff006633),
                                             fontWeight: FontWeight.w400,
@@ -488,14 +516,6 @@ class _EditProfileState extends State<EditProfile> {
                                   )
                               ),
                             ),
-
-
-
-
-
-
-
-
                           ],
                         ),
                       ),

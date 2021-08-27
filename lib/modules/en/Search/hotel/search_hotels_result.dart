@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:like_button/like_button.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SearchHotelsResult extends StatefulWidget {
   const SearchHotelsResult({Key? key}) : super(key: key);
@@ -77,7 +78,7 @@ class _SearchHotelsResultState extends State<SearchHotelsResult> {
         title: // Hotels
         Center(
           child: Text(
-              "Hotels",
+            AppLocalizations.of(context)!.hotel,
               style: const TextStyle(
                   color:  const Color(0xffffffff),
                   fontWeight: FontWeight.w700,
@@ -98,7 +99,8 @@ class _SearchHotelsResultState extends State<SearchHotelsResult> {
                     title:
                     // Choose Your Filter
                     Text(
-                        "Choose Your Filter ",
+                      AppLocalizations.of(context)!.filter,
+
                         style: const TextStyle(
                             color:  const Color(0xff313131),
                             fontWeight: FontWeight.w700,
@@ -106,7 +108,7 @@ class _SearchHotelsResultState extends State<SearchHotelsResult> {
                             fontStyle:  FontStyle.normal,
                             fontSize: 17.0
                         ),
-                        textAlign: TextAlign.left,
+                        //textAlign: TextAlign.left,
                     ),
                     content: Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -116,7 +118,7 @@ class _SearchHotelsResultState extends State<SearchHotelsResult> {
                           children: <Widget>[
                             // Budget
                             Text(
-                                "Budget",
+                              AppLocalizations.of(context)!.budget,
                                 style: const TextStyle(
                                     color:  const Color(0xff313131),
                                     fontWeight: FontWeight.w700,
@@ -141,7 +143,8 @@ class _SearchHotelsResultState extends State<SearchHotelsResult> {
                             ),
                             //hotel class
                             Text(
-                              "Hotel Class",
+                              AppLocalizations.of(context)!.hotelClass,
+
                               style: const TextStyle(
                                   color:  const Color(0xff313131),
                                   fontWeight: FontWeight.w700,
@@ -224,7 +227,7 @@ class _SearchHotelsResultState extends State<SearchHotelsResult> {
                                       ),
                                       // Facilities
                                       Text(
-                                          "Facilities",
+                                          AppLocalizations.of(context)!.facilities,
                                           style: const TextStyle(
                                               color:  const Color(0xff313131),
                                               fontWeight: FontWeight.w700,
@@ -262,7 +265,8 @@ class _SearchHotelsResultState extends State<SearchHotelsResult> {
                           child: // Apply
                           Center(
                             child: Text(
-                                "Apply",
+                                AppLocalizations.of(context)!.apply,
+
                                 style: const TextStyle(
                                     color:  const Color(0xffffffff),
                                     fontWeight: FontWeight.w700,
@@ -332,7 +336,7 @@ class _SearchHotelsResultState extends State<SearchHotelsResult> {
                           child: // Reset
                           Center(
                             child: Text(
-                                "Reset",
+                                AppLocalizations.of(context)!.reset,
                                 style: const TextStyle(
                                     color:  const Color(0xff006633),
                                     fontWeight: FontWeight.w700,
@@ -546,7 +550,7 @@ class _SearchHotelsResultState extends State<SearchHotelsResult> {
                                       ),
                                       // /night
                                       Text(
-                                          "/night",
+                                          AppLocalizations.of(context)!.night,
                                           style: const TextStyle(
                                             color:  const Color(0xff313131),
                                             fontWeight: FontWeight.w700,
@@ -566,7 +570,7 @@ class _SearchHotelsResultState extends State<SearchHotelsResult> {
                                         child:// Book again
                                         Center(
                                           child: Text(
-                                              "Show",
+                                              AppLocalizations.of(context)!.show,
                                               style: const TextStyle(
                                                   color:  const Color(0xffffffff),
                                                   fontWeight: FontWeight.w700,

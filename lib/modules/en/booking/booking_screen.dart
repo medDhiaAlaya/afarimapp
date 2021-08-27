@@ -2,6 +2,8 @@ import 'package:afarim/modules/en/booking/cancelled_screen.dart';
 import 'package:afarim/modules/en/booking/past_screen.dart';
 import 'package:afarim/modules/en/booking/upcoming_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class BookingScreen extends StatefulWidget {
   const BookingScreen({Key? key}) : super(key: key);
@@ -31,18 +33,24 @@ class _BookingScreenState extends State<BookingScreen> {
               indicatorColor: Colors.white,
 
               tabs: [
-                Tab(text:'Upcoming',
+                Tab(
+                  text:
+                  AppLocalizations.of(context)!.upComing,
 
                 ),
-                Tab(text:'Past',
+                Tab(text:
+                AppLocalizations.of(context)!.past,
 
                 ),
-                Tab(text:'Cancelled',
+                Tab(text:
+                AppLocalizations.of(context)!.cancelled,
 
                 ),
               ],
             ),
-            title: Center(child: Text('Booking')),
+            title: Center(child: Text(
+                AppLocalizations.of(context)!.booking,
+            )),
           ),
           body: TabBarView(
             children: [
