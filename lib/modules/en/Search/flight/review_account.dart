@@ -1,6 +1,8 @@
 import 'package:afarim/modules/en/Search/flight/payement.dart';
 import 'package:afarim/modules/en/login_sign_up/Login_screen.dart';
+import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ReviewAccount extends StatefulWidget {
   const ReviewAccount({Key? key}) : super(key: key);
@@ -26,7 +28,7 @@ class _ReviewAccountState extends State<ReviewAccount> {
           Container(
             padding: EdgeInsets.symmetric(horizontal: 20),
             width: double.infinity,
-            height: 75,
+            height: 85,
             decoration: BoxDecoration(
                 color: const Color(0xff006633)
             ),
@@ -40,7 +42,7 @@ class _ReviewAccountState extends State<ReviewAccount> {
 
                       // PAR
                       Text(
-                          "PAR",
+                          AppLocalizations.of(context)!.par,
                           style: const TextStyle(
                               color:  const Color(0xffffffff),
                               fontWeight: FontWeight.w700,
@@ -60,7 +62,7 @@ class _ReviewAccountState extends State<ReviewAccount> {
                       ),
                       // TUN
                       Text(
-                          "TUN",
+                          AppLocalizations.of(context)!.tun,
                           style: const TextStyle(
                               color:  const Color(0xffffffff),
                               fontWeight: FontWeight.w700,
@@ -90,7 +92,7 @@ class _ReviewAccountState extends State<ReviewAccount> {
                       ),
                       // Round-trip
                       Text(
-                          "Round-trip",
+                          AppLocalizations.of(context)!.roundTrip,
                           style: const TextStyle(
                               color:  const Color(0xffffffff),
                               fontWeight: FontWeight.w700,
@@ -106,7 +108,7 @@ class _ReviewAccountState extends State<ReviewAccount> {
                   SizedBox(height: 10,),
                   // 1 Adult - 20 Jul - 26 Jul
                   Text(
-                    "1 Adult - 20 Jul - 26 Jul",
+                    AppLocalizations.of(context)!.date,
                     style: const TextStyle(
                         color:  const Color(0xffffffff),
                         fontWeight: FontWeight.w400,
@@ -126,7 +128,7 @@ class _ReviewAccountState extends State<ReviewAccount> {
             child: Container(
               padding: EdgeInsets.symmetric(vertical: 20),
                 width: double.infinity,
-                height: 650,
+                height: 700,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(
                         Radius.circular(6)
@@ -146,7 +148,7 @@ class _ReviewAccountState extends State<ReviewAccount> {
                   children: [
                     // Total price
                     Text(
-                        "Do you have an account?",
+                        AppLocalizations.of(context)!.doYouHaveAnAccount,
                         style: const TextStyle(
                             color:  const Color(0xff313131),
                             fontWeight: FontWeight.w700,
@@ -171,7 +173,7 @@ class _ReviewAccountState extends State<ReviewAccount> {
                           child: // Cancel
                           Center(
                             child: Text(
-                                "Log in now",
+                                AppLocalizations.of(context)!.logInNow,
                                 style: const TextStyle(
                                     color:  const Color(0xff006633),
                                     fontWeight: FontWeight.w400,
@@ -199,7 +201,7 @@ class _ReviewAccountState extends State<ReviewAccount> {
                     ),
                     SizedBox(height: 10,),
                     Text(
-                        "Or enter your data",
+                        AppLocalizations.of(context)!.orEnterYourData,
                         style: const TextStyle(
                             color:  const Color(0xff313131),
                             fontWeight: FontWeight.w700,
@@ -274,7 +276,8 @@ class _ReviewAccountState extends State<ReviewAccount> {
                                       fontStyle:  FontStyle.normal,
                                       fontSize: 14.0
                                   ),
-                                  text: "First Name"),
+                                  text:
+                                  AppLocalizations.of(context)!.firstName,),
                               TextSpan(
                                   style: const TextStyle(
                                       color:  const Color(0xffd90000),
@@ -324,7 +327,9 @@ class _ReviewAccountState extends State<ReviewAccount> {
                                       fontStyle:  FontStyle.normal,
                                       fontSize: 14.0
                                   ),
-                                  text: "Last Name"),
+                                  text:
+                                  AppLocalizations.of(context)!.lastName,
+                              ),
                               TextSpan(
                                   style: const TextStyle(
                                       color:  const Color(0xffd90000),
@@ -364,7 +369,7 @@ class _ReviewAccountState extends State<ReviewAccount> {
                     SizedBox(height: 10,
                     ),
                     Text(
-                        "Email",
+                        AppLocalizations.of(context)!.email,
                         style: const TextStyle(
                             color:  const Color(0xff313131),
                             fontWeight: FontWeight.w400,
@@ -413,7 +418,8 @@ class _ReviewAccountState extends State<ReviewAccount> {
                                             fontStyle:  FontStyle.normal,
                                             fontSize: 14.0
                                         ),
-                                        text: "Country Code"),
+                                        text:
+                                        AppLocalizations.of(context)!.countryCode,),
                                     TextSpan(
                                         style: const TextStyle(
                                             color:  const Color(0xffd90000),
@@ -439,7 +445,9 @@ class _ReviewAccountState extends State<ReviewAccount> {
                                             fontStyle:  FontStyle.normal,
                                             fontSize: 14.0
                                         ),
-                                        text: "Mobile Number"),
+                                        text:
+                                        AppLocalizations.of(context)!.mobileNumber,
+                                        ),
                                     TextSpan(
                                         style: const TextStyle(
                                             color:  const Color(0xffd90000),
@@ -462,7 +470,18 @@ class _ReviewAccountState extends State<ReviewAccount> {
                     ),
                     Row(
                       children: [
-                        //------------country code
+                        CountryCodePicker(
+                          padding: EdgeInsets.all(0),
+                          onChanged: print,
+                          // Initial selection and favorite can be one of code ('IT') OR dial_code('+39')
+                          initialSelection: 'SA',
+                          favorite: ['+966', 'SA'],
+                          showFlagDialog: true,
+                          comparator: (a, b) => b.name!.compareTo(a.name!),
+                          //Get the country information relevant to the initial selection
+                          onInit: (code) =>
+                              print("on init ${code!.name} ${code.dialCode} ${code.name}"),
+                        ),
                         SizedBox(width: 5,),
                         Expanded(
                           child: Container(
@@ -501,7 +520,9 @@ class _ReviewAccountState extends State<ReviewAccount> {
                                       fontStyle:  FontStyle.normal,
                                       fontSize: 14.0
                                   ),
-                                  text: "Address"),
+                                  text:
+                                  AppLocalizations.of(context)!.address,
+                              ),
                               TextSpan(
                                   style: const TextStyle(
                                       color:  const Color(0xffd90000),
@@ -553,7 +574,7 @@ class _ReviewAccountState extends State<ReviewAccount> {
                           child: // Save
                           Center(
                             child: Text(
-                                "Save",
+                                AppLocalizations.of(context)!.save,
                                 style: const TextStyle(
                                     color:  const Color(0xffffffff),
                                     fontWeight: FontWeight.w400,

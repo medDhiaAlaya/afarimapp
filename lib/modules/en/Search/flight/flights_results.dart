@@ -1,6 +1,8 @@
 import 'package:afarim/modules/en/Search/flight/choose_seat_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class FlightResult extends StatefulWidget {
   const FlightResult({Key? key}) : super(key: key);
@@ -20,7 +22,8 @@ class _FlightResultState extends State<FlightResult> {
         title: // Flights
         Center(
           child: Text(
-              "Flights",
+              AppLocalizations.of(context)!.flights,
+
               style: const TextStyle(
                   color:  const Color(0xffffffff),
                   fontWeight: FontWeight.w700,
@@ -43,7 +46,7 @@ class _FlightResultState extends State<FlightResult> {
 
           Container(
               width: double.infinity,
-              height: 75,
+              height: 85,
               decoration: BoxDecoration(
                   color: const Color(0xff006633)
               ),
@@ -57,7 +60,7 @@ class _FlightResultState extends State<FlightResult> {
 
                       // PAR
                       Text(
-                          "PAR",
+                          AppLocalizations.of(context)!.par,
                           style: const TextStyle(
                               color:  const Color(0xffffffff),
                               fontWeight: FontWeight.w700,
@@ -77,7 +80,7 @@ class _FlightResultState extends State<FlightResult> {
                       ),
                       // TUN
                       Text(
-                          "TUN",
+                          AppLocalizations.of(context)!.tun,
                           style: const TextStyle(
                               color:  const Color(0xffffffff),
                               fontWeight: FontWeight.w700,
@@ -107,7 +110,8 @@ class _FlightResultState extends State<FlightResult> {
                       ),
                       // Round-trip
                       Text(
-                          "Round-trip",
+                          AppLocalizations.of(context)!.roundTrip,
+
                           style: const TextStyle(
                               color:  const Color(0xffffffff),
                               fontWeight: FontWeight.w700,
@@ -123,7 +127,7 @@ class _FlightResultState extends State<FlightResult> {
                   SizedBox(height: 10,),
                   // 1 Adult - 20 Jul - 26 Jul
                   Text(
-                      "1 Adult - 20 Jul - 26 Jul",
+                    AppLocalizations.of(context)!.date,
                       style: const TextStyle(
                           color:  const Color(0xffffffff),
                           fontWeight: FontWeight.w400,
@@ -143,7 +147,7 @@ class _FlightResultState extends State<FlightResult> {
               child: // Cheapest
               Center(
                 child: Text(
-                    "Cheapest",
+                    AppLocalizations.of(context)!.cheapest,
                     style: const TextStyle(
                         color:  const Color(0xffffffff),
                         fontWeight: FontWeight.w700,
@@ -176,7 +180,7 @@ class _FlightResultState extends State<FlightResult> {
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Container(
                       width: 330,
-                      height: 260,
+                      height: 270,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.all(
                               Radius.circular(6)
@@ -217,7 +221,9 @@ class _FlightResultState extends State<FlightResult> {
                                                       fontStyle:  FontStyle.normal,
                                                       fontSize: 14.0
                                                   ),
-                                                  text: "01:10 PM ---"),
+                                                  text:
+                                                  AppLocalizations.of(context)!.timeTicket,
+                                              ),
                                               TextSpan(
                                                   style: const TextStyle(
                                                       color:  const Color(0xff999966),
@@ -226,7 +232,9 @@ class _FlightResultState extends State<FlightResult> {
                                                       fontStyle:  FontStyle.normal,
                                                       fontSize: 14.0
                                                   ),
-                                                  text: "Direct "),
+                                                  text:
+                                                  AppLocalizations.of(context)!.direct,
+                                              ),
                                               TextSpan(
                                                   style: const TextStyle(
                                                       color:  const Color(0xff313131),
@@ -235,7 +243,10 @@ class _FlightResultState extends State<FlightResult> {
                                                       fontStyle:  FontStyle.normal,
                                                       fontSize: 14.0
                                                   ),
-                                                  text: " --- 02:50 PM")
+                                                  text:
+                                                  AppLocalizations.of(context)!.ticketTime,
+
+                                                 )
                                             ]
                                         )
                                     ),
@@ -252,7 +263,8 @@ class _FlightResultState extends State<FlightResult> {
                                                       fontStyle:  FontStyle.normal,
                                                       fontSize: 12.0
                                                   ),
-                                                  text: "PAR  "),
+                                                  text:
+                                                  AppLocalizations.of(context)!.par,),
                                               TextSpan(
                                                 style: const TextStyle(
                                                     color:  const Color(0xff313131),
@@ -261,7 +273,10 @@ class _FlightResultState extends State<FlightResult> {
                                                     fontStyle:  FontStyle.normal,
                                                     fontSize: 10.0
                                                 ),
-                                                  text: "Flight duration: 02h 40m",
+                                                  text:
+                                                  AppLocalizations.of(context)!.flightDuration,
+
+
                                               ),
                                               TextSpan(
                                                   style: const TextStyle(
@@ -271,7 +286,8 @@ class _FlightResultState extends State<FlightResult> {
                                                       fontStyle:  FontStyle.normal,
                                                       fontSize: 12.0
                                                   ),
-                                                  text: "  TUN"),
+                                                  text:
+                                                  AppLocalizations.of(context)!.tun,),
                                             ]
                                         )
                                     ),
@@ -357,7 +373,8 @@ class _FlightResultState extends State<FlightResult> {
                                                       fontStyle:  FontStyle.normal,
                                                       fontSize: 14.0
                                                   ),
-                                                  text: "01:10 PM ---"),
+                                                  text:
+                                                  AppLocalizations.of(context)!.timeTicket,),
                                               TextSpan(
                                                   style: const TextStyle(
                                                       color:  const Color(0xff999966),
@@ -366,7 +383,9 @@ class _FlightResultState extends State<FlightResult> {
                                                       fontStyle:  FontStyle.normal,
                                                       fontSize: 14.0
                                                   ),
-                                                  text: "Direct "),
+                                                  text:
+                                                  AppLocalizations.of(context)!.direct,
+                                                  ),
                                               TextSpan(
                                                   style: const TextStyle(
                                                       color:  const Color(0xff313131),
@@ -375,7 +394,9 @@ class _FlightResultState extends State<FlightResult> {
                                                       fontStyle:  FontStyle.normal,
                                                       fontSize: 14.0
                                                   ),
-                                                  text: " --- 02:50 PM")
+                                                  text:
+                                                  AppLocalizations.of(context)!.ticketTime,
+                                                  )
                                             ]
                                         )
                                     ),
@@ -392,7 +413,9 @@ class _FlightResultState extends State<FlightResult> {
                                                       fontStyle:  FontStyle.normal,
                                                       fontSize: 12.0
                                                   ),
-                                                  text: "PAR  "),
+                                                  text:
+                                                  AppLocalizations.of(context)!.par,
+                                                  ),
                                               TextSpan(
                                                 style: const TextStyle(
                                                     color:  const Color(0xff313131),
@@ -401,7 +424,8 @@ class _FlightResultState extends State<FlightResult> {
                                                     fontStyle:  FontStyle.normal,
                                                     fontSize: 10.0
                                                 ),
-                                                text: "Flight duration: 02h 40m",
+                                                text:
+                                                AppLocalizations.of(context)!.flightDuration,
                                               ),
                                               TextSpan(
                                                   style: const TextStyle(
@@ -411,7 +435,9 @@ class _FlightResultState extends State<FlightResult> {
                                                       fontStyle:  FontStyle.normal,
                                                       fontSize: 12.0
                                                   ),
-                                                  text: "  TUN"),
+                                                  text:
+                                                  AppLocalizations.of(context)!.tun,
+                                              ),
                                             ]
                                         )
                                     ),
@@ -478,7 +504,7 @@ class _FlightResultState extends State<FlightResult> {
                               // Total price
                               Expanded(
                                 child: Text(
-                                    "Total price",
+                                  AppLocalizations.of(context)!.totalPrice,
                                     style: const TextStyle(
                                         color:  const Color(0xff313131),
                                         fontWeight: FontWeight.w700,
@@ -486,7 +512,7 @@ class _FlightResultState extends State<FlightResult> {
                                         fontStyle:  FontStyle.normal,
                                         fontSize: 12.0
                                     ),
-                                    textAlign: TextAlign.left,
+                                    //textAlign: TextAlign.left,
                                 ),
                               ),
                               // $570

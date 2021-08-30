@@ -1,5 +1,6 @@
 import 'package:afarim/modules/en/Search/flight/review_account.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ReviewYourTrip extends StatefulWidget {
   const ReviewYourTrip({Key? key}) : super(key: key);
@@ -18,7 +19,7 @@ class _ReviewYourTripState extends State<ReviewYourTrip> {
         title: // Review your trip
         Center(
           child: Text(
-              "Review your trip",
+              AppLocalizations.of(context)!.reviewYourTrip,
               style: const TextStyle(
                   color:  const Color(0xffffffff),
                   fontWeight: FontWeight.w700,
@@ -35,7 +36,7 @@ class _ReviewYourTripState extends State<ReviewYourTrip> {
           Container(
             padding: EdgeInsets.symmetric(horizontal: 20),
             width: double.infinity,
-            height: 75,
+            height: 85,
             decoration: BoxDecoration(
                 color: const Color(0xff006633)
             ),
@@ -49,7 +50,7 @@ class _ReviewYourTripState extends State<ReviewYourTrip> {
 
                       // PAR
                       Text(
-                          "PAR",
+                          AppLocalizations.of(context)!.par,
                           style: const TextStyle(
                               color:  const Color(0xffffffff),
                               fontWeight: FontWeight.w700,
@@ -69,7 +70,7 @@ class _ReviewYourTripState extends State<ReviewYourTrip> {
                       ),
                       // TUN
                       Text(
-                          "TUN",
+                          AppLocalizations.of(context)!.tun,
                           style: const TextStyle(
                               color:  const Color(0xffffffff),
                               fontWeight: FontWeight.w700,
@@ -99,7 +100,7 @@ class _ReviewYourTripState extends State<ReviewYourTrip> {
                       ),
                       // Round-trip
                       Text(
-                          "Round-trip",
+                          AppLocalizations.of(context)!.roundTrip,
                           style: const TextStyle(
                               color:  const Color(0xffffffff),
                               fontWeight: FontWeight.w700,
@@ -115,7 +116,7 @@ class _ReviewYourTripState extends State<ReviewYourTrip> {
                   SizedBox(height: 10,),
                   // 1 Adult - 20 Jul - 26 Jul
                   Text(
-                    "1 Adult - 20 Jul - 26 Jul",
+                    AppLocalizations.of(context)!.date,
                     style: const TextStyle(
                         color:  const Color(0xffffffff),
                         fontWeight: FontWeight.w400,
@@ -170,12 +171,13 @@ class _ReviewYourTripState extends State<ReviewYourTrip> {
                               fontStyle:  FontStyle.normal,
                               fontSize: 13.0
                           ),
-                          textAlign: TextAlign.left,
+                          //textAlign: TextAlign.left,
                       ),
                     ),
                     // 02h 40m
                     Text(
-                        "02h 40m",
+                        AppLocalizations.of(context)!.flightTime,
+
                         style: const TextStyle(
                             color:  const Color(0xff313131),
                             fontWeight: FontWeight.w400,
@@ -195,7 +197,7 @@ class _ReviewYourTripState extends State<ReviewYourTrip> {
             padding: const EdgeInsets.all(20.0),
             child: Container(
                 width: double.infinity,
-                height: 70,
+                height: 100,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(
                         Radius.circular(6)
@@ -219,7 +221,7 @@ class _ReviewYourTripState extends State<ReviewYourTrip> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                              "Total price",
+                              AppLocalizations.of(context)!.totalPrice,
                               style: const TextStyle(
                                   color:  const Color(0xff313131),
                                   fontWeight: FontWeight.w700,
@@ -231,7 +233,7 @@ class _ReviewYourTripState extends State<ReviewYourTrip> {
                           ),
                           // Including tax
                           Text(
-                              "Inclusing tax",
+                            AppLocalizations.of(context)!.includingTax,
                               style: const TextStyle(
                                   color:  const Color(0xffc4c4c4),
                                   fontWeight: FontWeight.w400,
@@ -267,7 +269,7 @@ class _ReviewYourTripState extends State<ReviewYourTrip> {
             child: Container(
               padding: EdgeInsets.all(30),
                 width: double.infinity,
-                height: 160,
+                height: 180,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(
                         Radius.circular(6)
@@ -285,7 +287,7 @@ class _ReviewYourTripState extends State<ReviewYourTrip> {
                 children: [
                   // Price information
                   Text(
-                      "Price information",
+                      AppLocalizations.of(context)!.priceInformation,
                       style: const TextStyle(
                           color:  const Color(0xff313131),
                           fontWeight: FontWeight.w700,
@@ -329,7 +331,7 @@ class _ReviewYourTripState extends State<ReviewYourTrip> {
                         children: [
                           // Partially Refundable fare
                           Text(
-                              "Partially Refundable fare",
+                            AppLocalizations.of(context)!.partiallyRefundableFare,
                               style: const TextStyle(
                                   color:  const Color(0xffc4c4c4),
                                   fontWeight: FontWeight.w400,
@@ -341,7 +343,7 @@ class _ReviewYourTripState extends State<ReviewYourTrip> {
                           SizedBox(height: 5,),
                           // View fare Rules
                           Text(
-                              "View fare Rules",
+                            AppLocalizations.of(context)!.viewFareRules,
                               style: const TextStyle(
                                   color:  const Color(0xff999966),
                                   fontWeight: FontWeight.w700,
@@ -377,7 +379,7 @@ class _ReviewYourTripState extends State<ReviewYourTrip> {
                 child: // Continue
                 Center(
                   child: Text(
-                      "Continue",
+                      AppLocalizations.of(context)!.continueButton,
                       style: const TextStyle(
                           color:  const Color(0xffffffff),
                           fontWeight: FontWeight.w400,

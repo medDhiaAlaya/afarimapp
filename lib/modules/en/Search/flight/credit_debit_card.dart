@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_credit_card/credit_card_form.dart';
 import 'package:flutter_credit_card/credit_card_model.dart';
 import 'package:flutter_credit_card/credit_card_widget.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class CreditCardPayment extends StatefulWidget {
   const CreditCardPayment({Key? key}) : super(key: key);
@@ -26,7 +27,7 @@ class _CreditCardPaymentState extends State<CreditCardPayment> {
       appBar: AppBar(
         title: // Payment
         Text(
-            "Payment",
+          AppLocalizations.of(context)!.payment,
             style: const TextStyle(
                 color:  const Color(0xffffffff),
                 fontWeight: FontWeight.w700,
@@ -59,7 +60,7 @@ class _CreditCardPaymentState extends State<CreditCardPayment> {
 
                       // PAR
                       Text(
-                          "PAR",
+                          AppLocalizations.of(context)!.par,
                           style: const TextStyle(
                               color:  const Color(0xffffffff),
                               fontWeight: FontWeight.w700,
@@ -79,7 +80,7 @@ class _CreditCardPaymentState extends State<CreditCardPayment> {
                       ),
                       // TUN
                       Text(
-                          "TUN",
+                          AppLocalizations.of(context)!.tun,
                           style: const TextStyle(
                               color:  const Color(0xffffffff),
                               fontWeight: FontWeight.w700,
@@ -109,7 +110,7 @@ class _CreditCardPaymentState extends State<CreditCardPayment> {
                       ),
                       // Round-trip
                       Text(
-                          "Round-trip",
+                          AppLocalizations.of(context)!.roundTrip,
                           style: const TextStyle(
                               color:  const Color(0xffffffff),
                               fontWeight: FontWeight.w700,
@@ -125,7 +126,7 @@ class _CreditCardPaymentState extends State<CreditCardPayment> {
                   SizedBox(height: 10,),
                   // 1 Adult - 20 Jul - 26 Jul
                   Text(
-                    "1 Adult - 20 Jul - 26 Jul",
+                    AppLocalizations.of(context)!.date,
                     style: const TextStyle(
                         color:  const Color(0xffffffff),
                         fontWeight: FontWeight.w400,
@@ -145,7 +146,7 @@ class _CreditCardPaymentState extends State<CreditCardPayment> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 40),
             child: Text(
-                "Credit/ Debit Card",
+              AppLocalizations.of(context)!.creditCard,
                 style: const TextStyle(
                     color:  const Color(0xff313131),
                     fontWeight: FontWeight.w700,
@@ -182,7 +183,8 @@ class _CreditCardPaymentState extends State<CreditCardPayment> {
                     themeColor: Colors.blue,
                     cardNumberDecoration: const InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Number',
+                      labelText:
+                      'Number',
                       hintText: 'XXXX XXXX XXXX XXXX',
                     ),
                     expiryDateDecoration: const InputDecoration(
@@ -223,8 +225,8 @@ class _CreditCardPaymentState extends State<CreditCardPayment> {
                             color: const Color(0xff006633)
                         ) ,
                         child: Center(
-                          child: const Text(
-                            'Pay now',
+                          child:  Text(
+                            AppLocalizations.of(context)!.payNow,
                             style: TextStyle(
                               color:  const Color(0xffffffff),
                               fontWeight: FontWeight.w400,

@@ -1,6 +1,7 @@
 import 'package:afarim/modules/en/Search/flight/credit_debit_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Payment extends StatefulWidget {
   const Payment({Key? key}) : super(key: key);
@@ -16,7 +17,7 @@ class _PaymentState extends State<Payment> {
       appBar: AppBar(
         title: // Payment
         Text(
-            "Payment",
+            AppLocalizations.of(context)!.payment,
             style: const TextStyle(
                 color:  const Color(0xffffffff),
                 fontWeight: FontWeight.w700,
@@ -50,7 +51,7 @@ class _PaymentState extends State<Payment> {
 
                           // PAR
                           Text(
-                              "PAR",
+                              AppLocalizations.of(context)!.par,
                               style: const TextStyle(
                                   color:  const Color(0xffffffff),
                                   fontWeight: FontWeight.w700,
@@ -70,7 +71,7 @@ class _PaymentState extends State<Payment> {
                           ),
                           // TUN
                           Text(
-                              "TUN",
+                              AppLocalizations.of(context)!.tun,
                               style: const TextStyle(
                                   color:  const Color(0xffffffff),
                                   fontWeight: FontWeight.w700,
@@ -100,7 +101,7 @@ class _PaymentState extends State<Payment> {
                           ),
                           // Round-trip
                           Text(
-                              "Round-trip",
+                              AppLocalizations.of(context)!.roundTrip,
                               style: const TextStyle(
                                   color:  const Color(0xffffffff),
                                   fontWeight: FontWeight.w700,
@@ -116,7 +117,7 @@ class _PaymentState extends State<Payment> {
                       SizedBox(height: 10,),
                       // 1 Adult - 20 Jul - 26 Jul
                       Text(
-                        "1 Adult - 20 Jul - 26 Jul",
+                        AppLocalizations.of(context)!.date,
                         style: const TextStyle(
                             color:  const Color(0xffffffff),
                             fontWeight: FontWeight.w400,
@@ -138,7 +139,7 @@ class _PaymentState extends State<Payment> {
                 child: Container(
                   padding: EdgeInsets.all(30),
                     width: double.infinity,
-                    height: 249,
+                    height: 300,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.all(
                             Radius.circular(6)
@@ -181,7 +182,7 @@ class _PaymentState extends State<Payment> {
                                     children: [
                                       // Credit/ Debit Card
                                       Text(
-                                          "Credit/ Debit Card",
+                                          AppLocalizations.of(context)!.creditCard,
                                           style: const TextStyle(
                                               color:  const Color(0xff313131),
                                               fontWeight: FontWeight.w700,
@@ -194,10 +195,10 @@ class _PaymentState extends State<Payment> {
                                       SizedBox(height: 5,),
                                       // You can use all type of card here
                                       Text(
-                                          "You can use all type of card here",
+                                          AppLocalizations.of(context)!.cartText,
                                           style: const TextStyle(
                                               color:  const Color(0xffc4c4c4),
-                                              fontWeight: FontWeight.w400,
+                                              fontWeight: FontWeight.w500,
                                               fontFamily: "Cairo",
                                               fontStyle:  FontStyle.normal,
                                               fontSize: 10.0
@@ -254,7 +255,8 @@ class _PaymentState extends State<Payment> {
                                     children: [
                                       // Credit/ Debit Card
                                       Text(
-                                          "Net Banking",
+                                          AppLocalizations.of(context)!.netBanking,
+
                                           style: const TextStyle(
                                               color:  const Color(0xff313131),
                                               fontWeight: FontWeight.w700,
@@ -267,7 +269,7 @@ class _PaymentState extends State<Payment> {
                                       SizedBox(height: 5,),
                                       // You can use all type of card here
                                       Text(
-                                          "All major bank are supported",
+                                          AppLocalizations.of(context)!.allMajorBankAreSupported,
                                           style: const TextStyle(
                                               color:  const Color(0xffc4c4c4),
                                               fontWeight: FontWeight.w400,
@@ -327,7 +329,7 @@ class _PaymentState extends State<Payment> {
                                     children: [
                                       // Credit/ Debit Card
                                       Text(
-                                          "Gift Card/ Coupon",
+                                          AppLocalizations.of(context)!.coupon,
                                           style: const TextStyle(
                                               color:  const Color(0xff313131),
                                               fontWeight: FontWeight.w700,
@@ -340,7 +342,7 @@ class _PaymentState extends State<Payment> {
                                       SizedBox(height: 5,),
                                       // You can use all type of card here
                                       Text(
-                                          "Use to pay partial, complete amount",
+                                          AppLocalizations.of(context)!.couponText,
                                           style: const TextStyle(
                                               color:  const Color(0xffc4c4c4),
                                               fontWeight: FontWeight.w400,
@@ -375,7 +377,7 @@ class _PaymentState extends State<Payment> {
               child: // Payment Options
               Center(
                 child: Text(
-                    "Payment Options",
+                    AppLocalizations.of(context)!.paymentOptions,
                     style: const TextStyle(
                         color:  const Color(0xffffffff),
                         fontWeight: FontWeight.w700,

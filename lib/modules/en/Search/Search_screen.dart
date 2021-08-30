@@ -279,6 +279,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                     bottom: 5,
                                     left: 10,
                                     child: Column(
+                                      mainAxisSize: MainAxisSize.min,
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
                                         Text(

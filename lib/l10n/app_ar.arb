@@ -328,6 +328,261 @@
   "@reset": {
     "type": "text",
     "placeholders": {}
+  },
+  "multiCity": "مدن متعددة",
+  "@multiCity": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "roundTrip": "ذهاب وعودة",
+  "@roundTrip": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "oneWay": "ذهاب فقط",
+  "@oneWay": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "from": "من",
+  "@from": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "to": "إلى",
+  "@to": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "findFlights": "بحث عن الرحلات",
+  "@findFlights": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "flights": "الرحلات",
+  "@flights": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "cheapest": "الأقل ثمنا",
+  "@cheapest": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "tun": "تونس",
+  "@tun": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "par": "باريس",
+  "@par": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "date": "1 بالغ - 20 يوليو - 26 يوليو",
+  "@date": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "totalPrice": "السعر الإجمالي",
+  "@totalPrice": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "direct": "مباشر",
+  "@direct": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "timeTicket": "02:50 مساءً--- ",
+  "@timeTicket": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "ticketTime": " ---02:50 مساءً",
+  "@ticketTime": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "flightDuration": "  مدة الرحلة:ساعتين و 40ً دق  ",
+  "@flightDuration": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "chooseASeat": "اختر مقعد",
+  "@chooseASeat": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "economyClass": "الدرجة الاقتصادية",
+  "@economyClass": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectTheSameSeats": "حدد نفس المقاعد",
+  "@selectTheSameSeats": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectLater": "حدد لاحقا",
+  "@selectLater": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reviewYourTrip": "راجع رحلتك",
+  "@reviewYourTrip": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "flightTime": "ساعتين و40 دق",
+  "@flightTime": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "includingTax": "شامل للضريبة",
+  "@includingTax": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "priceInformation": "معلومات عن الأسعار",
+  "@priceInformation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "partiallyRefundableFare": "أجرة قابلة للاسترداد جزئياً",
+  "@partiallyRefundableFare": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "viewFareRules": "عرض قواعد الأجور",
+  "@viewFareRules": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "continueButton": "أكمل",
+  "@continueButton": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "doYouHaveAnAccount": "هل لديك حساب؟",
+  "@doYouHaveAnAccount": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "logInNow": "سجل الدخول الآن",
+  "@logInNow": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orEnterYourData": "أو قم بادخال البيانات الخاصة بك",
+  "@orEnterYourData": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "payment": "الدفع",
+  "@payment": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "creditCard": "بطاقة الائتمان / الخصم",
+  "@creditCard": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "cartText": "يمكنك استخدام جميع أنواع البطاقات هنا",
+  "@cartText": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "netBanking": "شبكة البنوك",
+  "@netBanking": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "allMajorBankAreSupported": "يدعم جميع البنوك الكبرى",
+  "@allMajorBankAreSupported": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "coupon": "بطاقة هدايا / قسيمة",
+  "@coupon": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "couponText": "استخدامها للدفع الجزئي، أو الكامل",
+  "@couponText": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "paymentOptions": "خيارات الدفع",
+  "@paymentOptions": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "payNow": "ادفع الآن",
+  "@payNow": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "loginToYourAccount": "تسجيل الدخول إلى حسابك",
+  "@loginToYourAccount": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "login": "تسجيل الدخول",
+  "@login": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "forgotYourPassword": "نسيت كلمة المرور؟",
+  "@forgotYourPassword": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dontHaveAnAccount": "ليس لديك حساب؟",
+  "@dontHaveAnAccount": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "signUp": "أنشئ حسابك",
+  "@signUp": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createAnAccount": "إنشاء حساب",
+  "@createAnAccount": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "registerText": "أدخل عنوان البريد الإلكتروني الذي استخدمته\n.لإنشاء حساب عفارم الخاص بك",
+  "@registerText": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "send": "إرسال",
+  "@send": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "rememberEmail": "إذا كنت لا تتذكر عنوان البريد الإلكتروني\nاستخدمته لإنشاء ملف\nالحساب ، يرجى ",
+  "@rememberEmail": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createYourAccount": "أنشئ حسابك",
+  "@createYourAccount": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "userName": "اسم المستخدم",
+  "@userName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "signIn": "سجل الدخول",
+  "@signIn": {
+    "type": "text",
+    "placeholders": {}
   }
 
 }

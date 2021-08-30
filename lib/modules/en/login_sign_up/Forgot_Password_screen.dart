@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ForgetPasswordScreen extends StatelessWidget {
   const ForgetPasswordScreen({Key? key}) : super(key: key);
@@ -17,7 +18,7 @@ class ForgetPasswordScreen extends StatelessWidget {
         elevation: 0.0,
         backgroundColor: Color(0xFF006633),
         title: Text(
-          'Create an account',
+          AppLocalizations.of(context)!.forgotYourPassword,
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.w600,
@@ -52,13 +53,15 @@ class ForgetPasswordScreen extends StatelessWidget {
                   height: 100.0,
                 ),
                 //Text
-                Text('Enter the email adress you used to create your Afarim accout',
+                Text(
+                  AppLocalizations.of(context)!.registerText,
+
                   style: GoogleFonts.cairo(
                     textStyle: TextStyle(
                       color: Color(0xFF313131),
                       fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                      height: 0.9,
+                      fontSize: 14,
+                      height: 1.2,
                     ),
                   ),
                 ),
@@ -77,7 +80,8 @@ class ForgetPasswordScreen extends StatelessWidget {
                       print(value);
                     },
                     decoration: InputDecoration(
-                      labelText: 'Email',
+                      labelText:
+                      AppLocalizations.of(context)!.email,
                       border: OutlineInputBorder(),
                     ),
                   ),
@@ -96,7 +100,7 @@ class ForgetPasswordScreen extends StatelessWidget {
                   child: MaterialButton(
                     onPressed: () {},
                     child: Text(
-                      'Send',
+                      AppLocalizations.of(context)!.send,
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -109,22 +113,25 @@ class ForgetPasswordScreen extends StatelessWidget {
                   height:50.0,
                 ),
                 Center(
-                  child: Text('If you don\'t remember the email address you used to create your account, please',
+                  child: Text(
+                    AppLocalizations.of(context)!.rememberEmail,
+
                     textAlign: TextAlign.center,
                     style: GoogleFonts.cairo(
                       textStyle: TextStyle(
 
                         color: Color(0xFF313131),
                         fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                        height: 0.9,
+                        fontSize: 14,
+                        height: 1.2,
                       ),
                     ),
                   ),
                 ),
                 Center(
                   child: TextButton(onPressed: (){
-                  }, child: Text('contact us',
+                  }, child: Text(
+                    AppLocalizations.of(context)!.contactUs,
                     style: GoogleFonts.cairo(
                       textStyle: TextStyle(
                         color: Color(0xFF999966),

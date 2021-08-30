@@ -328,5 +328,260 @@
   "@reset": {
     "type": "text",
     "placeholders": {}
+  },
+  "multiCity": "MULTI-CITY",
+  "@multiCity": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "roundTrip": "ROUND-TRIP",
+  "@roundTrip": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "oneWay": "ONE-WAY",
+  "@oneWay": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "from": "From",
+  "@from": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "to": "To",
+  "@to": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "findFlights": "Find flights",
+  "@findFlights": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "flights": "Flights",
+  "@flights": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "cheapest": "Cheapest",
+  "@cheapest": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "tun": "TUN",
+  "@tun": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "par": "PAR",
+  "@par": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "date": "1 Adult - 20 Jul - 26 Jul",
+  "@date": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "totalPrice": "Total price",
+  "@totalPrice": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "direct": "Direct",
+  "@direct": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "timeTicket": " 01:10 PM ---",
+  "@timeTicket": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "ticketTime": "  --- 02:50 PM",
+  "@ticketTime": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "flightDuration": "Flight duration: 02h 40m",
+  "@flightDuration": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "chooseASeat": "Choose a Seat",
+  "@chooseASeat": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "economyClass": "Economy Class",
+  "@economyClass": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectTheSameSeats": "Select the same seats",
+  "@selectTheSameSeats": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectLater": "Select later",
+  "@selectLater": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reviewYourTrip": "Review your trip",
+  "@reviewYourTrip": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "flightTime": "02h 40m",
+  "@flightTime": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "includingTax": "Including tax",
+  "@includingTax": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "priceInformation": "Price information",
+  "@priceInformation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "partiallyRefundableFare": "Partially Refundable fareً",
+  "@partiallyRefundableFare": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "viewFareRules": "View Fare Rules",
+  "@viewFareRules": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "continueButton": "Continue",
+  "@continueButton": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "doYouHaveAnAccount": "Do you have an account",
+  "@doYouHaveAnAccount": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "logInNow": "Log in now",
+  "@logInNow": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orEnterYourData": "Or enter your data",
+  "@orEnterYourData": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "payment": "Payment",
+  "@payment": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "creditCard": "Credit/ Debit Card",
+  "@creditCard": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "cartText": "You can use all type of card here",
+  "@cartText": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "netBanking": "Net Banking",
+  "@netBanking": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "allMajorBankAreSupported": "All major bank are supported",
+  "@allMajorBankAreSupported": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "coupon": "Gift Card/ Coupon",
+  "@coupon": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "couponText": "Use to pay partial, complete amount",
+  "@couponText": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "paymentOptions": "Payment options",
+  "@paymentOptions": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "payNow": "Pay now",
+  "@payNow": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "loginToYourAccount": "Login to your account",
+  "@loginToYourAccount": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "login": "Login",
+  "@login": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "forgotYourPassword": "Forgot your Password?",
+  "@forgotYourPassword": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dontHaveAnAccount": "You Don\n't have an account?",
+  "@dontHaveAnAccount": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "signUp": "Sign up",
+  "@signUp": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createAnAccount": "Create an account",
+  "@createAnAccount": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "registerText": "Enter the email adress you used to create your Afarim accout",
+  "@registerText": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "send": "Send",
+  "@send": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "rememberEmail": "If you don\n't remember the email address you used to create your account, please",
+  "@rememberEmail": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createYourAccount": "Create your account",
+  "@createYourAccount": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "userName": "Username",
+  "@userName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "signIn": "Sign in",
+  "@signIn": {
+    "type": "text",
+    "placeholders": {}
   }
 }

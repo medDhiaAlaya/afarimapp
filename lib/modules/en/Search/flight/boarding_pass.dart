@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class BoardingPass extends StatelessWidget {
   const BoardingPass({Key? key}) : super(key: key);
@@ -11,7 +12,7 @@ class BoardingPass extends StatelessWidget {
       appBar: AppBar(
         title: // Payment
         Text(
-          "Payment",
+          AppLocalizations.of(context)!.payment,
           style: const TextStyle(
               color:  const Color(0xffffffff),
               fontWeight: FontWeight.w700,
@@ -43,7 +44,7 @@ class BoardingPass extends StatelessWidget {
 
                       // PAR
                       Text(
-                          "PAR",
+                          AppLocalizations.of(context)!.par,
                           style: const TextStyle(
                               color:  const Color(0xffffffff),
                               fontWeight: FontWeight.w700,
@@ -63,7 +64,7 @@ class BoardingPass extends StatelessWidget {
                       ),
                       // TUN
                       Text(
-                          "TUN",
+                          AppLocalizations.of(context)!.tun,
                           style: const TextStyle(
                               color:  const Color(0xffffffff),
                               fontWeight: FontWeight.w700,
@@ -93,7 +94,7 @@ class BoardingPass extends StatelessWidget {
                       ),
                       // Round-trip
                       Text(
-                          "Round-trip",
+                          AppLocalizations.of(context)!.roundTrip,
                           style: const TextStyle(
                               color:  const Color(0xffffffff),
                               fontWeight: FontWeight.w700,
@@ -110,7 +111,7 @@ class BoardingPass extends StatelessWidget {
                   ),
                   // 1 Adult - 20 Jul - 26 Jul
                   Text(
-                    "1 Adult - 20 Jul - 26 Jul",
+                    AppLocalizations.of(context)!.date,
                     style: const TextStyle(
                         color:  const Color(0xffffffff),
                         fontWeight: FontWeight.w400,
@@ -161,6 +162,7 @@ class BoardingPass extends StatelessWidget {
                       ),
                       // TUNISAIR
                       Text(
+
                           "TUNISAIR",
                           style: const TextStyle(
                               color:  const Color(0xffd4071b),

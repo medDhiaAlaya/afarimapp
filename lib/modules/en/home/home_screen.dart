@@ -175,8 +175,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   child: Padding(
                     padding: const EdgeInsets.only(
-                      top: 8,
-                      right: 10,
+
+                      top: 6,
                     ),
                     child: Text(
                         AppLocalizations.of(context)!.istanbul,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'Login_screen.dart';
 
@@ -30,7 +31,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         elevation: 0.0,
         backgroundColor: Color(0xFF006633),
         title: Text(
-          'Create an account',
+          AppLocalizations.of(context)!.createAnAccount,
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.w600,
@@ -65,7 +66,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   height: 10.0,
                 ),
                 //create your account
-                Text('Create your account',
+                Text(
+                  AppLocalizations.of(context)!.createYourAccount,
                   style: GoogleFonts.cairo(
                     textStyle: TextStyle(
                       color: Color(0xFF313131),
@@ -90,7 +92,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       print(value);
                     },
                     decoration: InputDecoration(
-                      labelText: 'Username',
+                      labelText:
+                      AppLocalizations.of(context)!.userName,
                       border: OutlineInputBorder(),
                     ),
                   ),
@@ -112,7 +115,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       print(value);
                     },
                     decoration: InputDecoration(
-                      labelText: 'Email Address',
+                      labelText:
+                      AppLocalizations.of(context)!.email,
                       border: OutlineInputBorder(),
                     ),
                   ),
@@ -135,7 +139,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       print(value);
                     },
                     decoration: InputDecoration(
-                      labelText: 'Password',
+                      labelText:
+                      AppLocalizations.of(context)!.yourPassword,
                       suffixIcon: IconButton(
                         onPressed: (){
                           setState(() {
@@ -168,7 +173,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       print(value);
                     },
                     decoration: InputDecoration(
-                      labelText: 'Confirm Password',
+                      labelText:
+                      AppLocalizations.of(context)!.confirmPassword,
                       suffixIcon: IconButton(
                         onPressed: (){
                           setState(() {
@@ -201,7 +207,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       print(confirmPasswordController.text);
                     },
                     child: Text(
-                      'Sign up',
+                      AppLocalizations.of(context)!.signUp,
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -221,7 +227,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('You have an account?',
+                    Text(
+                      AppLocalizations.of(context)!.doYouHaveAnAccount,
                       style: GoogleFonts.cairo(
                         textStyle: TextStyle(
                           color: Color(0xFF313131),
@@ -233,7 +240,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                     TextButton(onPressed: (){
                       _navigateToNextScreen(context);
-                    }, child: Text('Sign in',
+                    }, child: Text(
+                      AppLocalizations.of(context)!.signIn,
                       style: GoogleFonts.cairo(
                         textStyle: TextStyle(
                           color: Color(0xFF999966),

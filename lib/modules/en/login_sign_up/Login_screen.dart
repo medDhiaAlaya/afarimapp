@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive/responsive.dart';
-import 'package:email_validator/email_validator.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'Forgot_Password_screen.dart';
 import 'SignUp_screen.dart';
@@ -49,7 +49,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   SizedBox(
                     height: 40.0,
                   ),
-                  Text('Login to your account',
+                  Text(
+                    AppLocalizations.of(context)!.loginToYourAccount,
                     style: GoogleFonts.cairo(
                       textStyle: TextStyle(
                         color: Color(0xFF313131),
@@ -75,7 +76,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         print(value);
                       },
                       decoration: InputDecoration(
-                        labelText: 'Email Address',
+                        labelText:
+                        AppLocalizations.of(context)!.email,
                         border: OutlineInputBorder(),
                       ),
                     ),
@@ -97,7 +99,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         print(value);
                       },
                       decoration: InputDecoration(
-                        labelText: 'Password',
+                        labelText:
+                        AppLocalizations.of(context)!.yourPassword,
                         suffixIcon: IconButton(
                           onPressed: (){
                             setState(() {
@@ -128,7 +131,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         print(passwordController.text);
                       },
                       child: Text(
-                        'Login',
+                        AppLocalizations.of(context)!.login,
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -144,7 +147,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     onPressed: () {
                       _navigateToForgetScreen(context);
                     },
-                    child: Text('Forgot your Password?',
+                    child: Text(
+                      AppLocalizations.of(context)!.forgotYourPassword,
                       style: GoogleFonts.cairo(
                         textStyle: TextStyle(
                           color: Color(0xFF313131),
@@ -165,7 +169,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     children: [
 
                       Center(
-                        child: Text('You Don\'t have an account?',
+                        child: Text(
+                          AppLocalizations.of(context)!.dontHaveAnAccount,
                           style: GoogleFonts.cairo(
                             textStyle: TextStyle(
                               color: Color(0xFF313131),
@@ -179,7 +184,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       Center(
                         child: TextButton(onPressed: () {
                           _navigateToNextScreen(context);
-                        }, child: Text('Sign up',
+                        }, child: Text(
+                          AppLocalizations.of(context)!.signUp,
                           style: GoogleFonts.cairo(
                             textStyle: TextStyle(
                               color: Color(0xFF999966),

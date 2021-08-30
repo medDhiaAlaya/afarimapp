@@ -2,6 +2,8 @@ import 'package:afarim/modules/en/Search/flight/flights_results.dart';
 import 'package:afarim/modules/en/Search/hotel/Select_rooms_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 class FlightScreen extends StatefulWidget {
   const FlightScreen({Key? key}) : super(key: key);
 
@@ -56,7 +58,8 @@ class _FlightScreenState extends State<FlightScreen> {
                   child: Container(
                     child: Center(
                       child: Text(
-                        "ONE-WAY",
+                        AppLocalizations.of(context)!.oneWay,
+
                         style: const TextStyle(
                             color:  const Color(0xff313131),
                             fontWeight: FontWeight.w400,
@@ -92,7 +95,7 @@ class _FlightScreenState extends State<FlightScreen> {
                   child: Container(
                     child: Center(
                       child: Text(
-                          "ROUND-TRIP",
+                          AppLocalizations.of(context)!.roundTrip,
                           style: const TextStyle(
                               color:  const Color(0xff313131),
                               fontWeight: FontWeight.w400,
@@ -128,7 +131,8 @@ class _FlightScreenState extends State<FlightScreen> {
                   child: Container(
                     child: Center(
                       child: Text(
-                          "MULTI-CITY",
+                          AppLocalizations.of(context)!.multiCity,
+
                           style: const TextStyle(
                               color:  const Color(0xff313131),
                               fontWeight: FontWeight.w400,
@@ -193,7 +197,7 @@ class _FlightScreenState extends State<FlightScreen> {
                                 ),
                                 Expanded(
                                     child: Text(
-                                      "From",
+                                      AppLocalizations.of(context)!.from,
                                       style: const TextStyle(
                                           color:  const Color(0xff313131),
                                           fontWeight: FontWeight.w400,
@@ -233,7 +237,7 @@ class _FlightScreenState extends State<FlightScreen> {
                                 ),
                                 Expanded(
                                     child: Text(
-                                      "To",
+                                      AppLocalizations.of(context)!.to,
                                       style: const TextStyle(
                                           color:  const Color(0xff313131),
                                           fontWeight: FontWeight.w400,
@@ -542,7 +546,8 @@ class _FlightScreenState extends State<FlightScreen> {
                   },
                   child: Center(
                     child: Text(
-                      "Find flights",
+                      AppLocalizations.of(context)!.findFlights,
+
                       style: const TextStyle(
                           color:  const Color(0xffffffff),
                           fontWeight: FontWeight.w400,

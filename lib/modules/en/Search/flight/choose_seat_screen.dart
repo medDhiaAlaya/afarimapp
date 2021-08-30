@@ -1,6 +1,7 @@
 import 'package:afarim/modules/en/Search/flight/review_your_trip.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ChooseSeatScreen extends StatefulWidget {
   const ChooseSeatScreen({Key? key}) : super(key: key);
@@ -20,7 +21,7 @@ class _ChooseSeatScreenState extends State<ChooseSeatScreen> {
         backgroundColor: const Color(0xff006633),
         title: // Choose a Seat
         Text(
-            "Choose a Seat",
+            AppLocalizations.of(context)!.chooseASeat,
             style: const TextStyle(
                 color:  const Color(0xffffffff),
                 fontWeight: FontWeight.w700,
@@ -35,7 +36,7 @@ class _ChooseSeatScreenState extends State<ChooseSeatScreen> {
         children: [
           Container(
             width: double.infinity,
-            height: 75,
+            height: 85,
             decoration: BoxDecoration(
                 color: const Color(0xff006633)
             ),
@@ -49,7 +50,7 @@ class _ChooseSeatScreenState extends State<ChooseSeatScreen> {
 
                       // PAR
                       Text(
-                          "PAR",
+                          AppLocalizations.of(context)!.par,
                           style: const TextStyle(
                               color:  const Color(0xffffffff),
                               fontWeight: FontWeight.w700,
@@ -69,7 +70,7 @@ class _ChooseSeatScreenState extends State<ChooseSeatScreen> {
                       ),
                       // TUN
                       Text(
-                          "TUN",
+                          AppLocalizations.of(context)!.tun,
                           style: const TextStyle(
                               color:  const Color(0xffffffff),
                               fontWeight: FontWeight.w700,
@@ -99,7 +100,7 @@ class _ChooseSeatScreenState extends State<ChooseSeatScreen> {
                       ),
                       // Round-trip
                       Text(
-                          "Round-trip",
+                          AppLocalizations.of(context)!.roundTrip,
                           style: const TextStyle(
                               color:  const Color(0xffffffff),
                               fontWeight: FontWeight.w700,
@@ -115,7 +116,7 @@ class _ChooseSeatScreenState extends State<ChooseSeatScreen> {
                   SizedBox(height: 10,),
                   // 1 Adult - 20 Jul - 26 Jul
                   Text(
-                    "1 Adult - 20 Jul - 26 Jul",
+                    AppLocalizations.of(context)!.date,
                     style: const TextStyle(
                         color:  const Color(0xffffffff),
                         fontWeight: FontWeight.w400,
@@ -153,7 +154,7 @@ class _ChooseSeatScreenState extends State<ChooseSeatScreen> {
                   Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: Text(
-                        "Economy class",
+                        AppLocalizations.of(context)!.economyClass,
                         style: const TextStyle(
                             color:  const Color(0xff313131),
                             fontWeight: FontWeight.w700,
@@ -161,7 +162,7 @@ class _ChooseSeatScreenState extends State<ChooseSeatScreen> {
                             fontStyle:  FontStyle.normal,
                             fontSize: 20.0
                         ),
-                        textAlign: TextAlign.left
+                        //textAlign: TextAlign.left
                     ),
                   ),
                   Padding(
@@ -256,7 +257,7 @@ class _ChooseSeatScreenState extends State<ChooseSeatScreen> {
                                             child: // Select the same seats
                                             Center(
                                               child: Text(
-                                                  "Select the same seats",
+                                                  AppLocalizations.of(context)!.selectTheSameSeats,
                                                   style: const TextStyle(
                                                       color:  const Color(0xffffffff),
                                                       fontWeight: FontWeight.w400,
@@ -283,7 +284,7 @@ class _ChooseSeatScreenState extends State<ChooseSeatScreen> {
                                           child: // select later
                                           Center(
                                             child: Text(
-                                                "select later",
+                                                AppLocalizations.of(context)!.selectLater,
                                                 style: const TextStyle(
                                                     color:  const Color(0xff006633),
                                                     fontWeight: FontWeight.w400,
