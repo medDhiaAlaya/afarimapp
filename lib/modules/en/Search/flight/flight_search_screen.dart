@@ -3,6 +3,10 @@ import 'package:afarim/modules/en/Search/hotel/Select_rooms_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+
+import 'package:intl/intl.dart';
 
 class FlightScreen extends StatefulWidget {
   const FlightScreen({Key? key}) : super(key: key);
@@ -261,7 +265,8 @@ class _FlightScreenState extends State<FlightScreen> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: InkWell(
-                      child: Icon(Icons.swap_vert),
+                      child: Icon(Icons.swap_vert,
+                      color: const Color(0x40000000),),
                       onTap: (){
                         print('pressed');
                       },),
@@ -312,7 +317,8 @@ class _FlightScreenState extends State<FlightScreen> {
                                 children: [
                                   // Check-in
                                   Text(
-                                      "Check-in",
+
+                                      "Return date",
                                       style: const TextStyle(
                                           color:Colors.grey,
                                           fontWeight: FontWeight.w400,
@@ -406,7 +412,8 @@ class _FlightScreenState extends State<FlightScreen> {
                                   children: [
                                     // Check-in
                                     Text(
-                                        "Check-in",
+
+                                        "Departure date",
                                         style: const TextStyle(
                                             color:Colors.grey,
                                             fontWeight: FontWeight.w400,
@@ -493,7 +500,7 @@ class _FlightScreenState extends State<FlightScreen> {
                   SizedBox(
                     width: 10,
                   ),
-                  Image(image:AssetImage("icons/room.png")),
+                  Image(image:AssetImage("icons/passengers.png")),
                   SizedBox(
                     width: 10,
                   ),
@@ -503,7 +510,9 @@ class _FlightScreenState extends State<FlightScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children:[
                         Text(
-                          "Passengers and cabin class",
+                          AppLocalizations.of(context)!.selectPassengersAndClass,
+
+                         // "Passengers and cabin class",
                           style: const TextStyle(
                               color:  const Color(0xffcccccc),
                               fontWeight: FontWeight.w400,

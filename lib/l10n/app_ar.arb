@@ -583,6 +583,31 @@
   "@signIn": {
     "type": "text",
     "placeholders": {}
+  },
+  "selectPassengersAndClass": "حدد الركاب والدرجة",
+  "@selectPassengersAndClass": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "classFlight": "الدرجة",
+  "@classFlight": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "first": "الدرجة الأولى",
+  "@first": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "economy": "الدرجة السياحية",
+  "@economy": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "business": "رجال الأعمال",
+  "@business": {
+    "type": "text",
+    "placeholders": {}
   }
 
 }

@@ -583,5 +583,30 @@
   "@signIn": {
     "type": "text",
     "placeholders": {}
+  },
+  "selectPassengersAndClass": "Select passengers and class",
+  "@selectPassengersAndClass": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "classFlight": "Class",
+  "@classFlight": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "first": "FIRST",
+  "@first": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "economy": "ECONOMY",
+  "@economy": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "business": "BUSINESS",
+  "@business": {
+    "type": "text",
+    "placeholders": {}
   }
 }

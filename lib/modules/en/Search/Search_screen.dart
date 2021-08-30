@@ -355,12 +355,6 @@ class _SearchScreenState extends State<SearchScreen> {
                               crossAxisSpacing: 10,
                             ),
 
-                            ////////////////////////////////////////////////////////////////////////////////// test list view scrolling for suggested list ///
-
-
-
-                            ////////////////////////////////////////////////////////////////////////////////// fin test///
-
                             StaggeredGridView.countBuilder(
                               shrinkWrap: true,
                               scrollDirection: Axis.vertical,

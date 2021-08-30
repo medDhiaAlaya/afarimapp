@@ -9,7 +9,7 @@ class SelectRoomsScreen extends StatefulWidget {
 }
 
 class _SelectRoomsScreenState extends State<SelectRoomsScreen> {
-  int roomNumber=0;
+  int roomNumber=1;
   int adultNumber=0;
   int childNumber=0;
   int infantNumber=0;
@@ -48,7 +48,7 @@ class _SelectRoomsScreenState extends State<SelectRoomsScreen> {
             SizedBox(height: 30,
             ),
             Text(
-              AppLocalizations.of(context)!.selectRoomsAndGuests,
+                AppLocalizations.of(context)!.selectPassengersAndClass,
                 style: const TextStyle(
                     color:  const Color(0xff313131),
                     fontWeight: FontWeight.w700,
@@ -58,112 +58,7 @@ class _SelectRoomsScreenState extends State<SelectRoomsScreen> {
                 ),
                 //textAlign: TextAlign.left,
             ),
-            SizedBox(height: 30,
-            ),
             // Rectangle 685
-            Container(
-
-                width: double.infinity,
-                height: 100,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(
-                        Radius.circular(6)
-                    ),
-                    boxShadow: [BoxShadow(
-                        color: const Color(0x40000000),
-                        offset: Offset(0,3),
-                        blurRadius: 6,
-                        spreadRadius: 0
-                    )] ,
-                    color: const Color(0xffffffff)
-                ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: Row(
-
-                  children: [
-                    CircleAvatar(
-                      backgroundColor: const Color(0xff999966),
-                     child: Image(image: AssetImage('icons/rooms.png'),),
-
-                      radius: 25,
-
-
-                    ),
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 24),
-                        child: Column(
-
-                          children: [
-                            // How many
-                            Text(
-                              AppLocalizations.of(context)!.howMany,
-                                style: const TextStyle(
-                                    color:  const Color(0xffc4c4c4),
-                                    fontWeight: FontWeight.w400,
-                                    fontFamily: "Cairo",
-                                    fontStyle:  FontStyle.normal,
-                                    fontSize: 12.0
-                                ),
-                            ),
-                            // Room
-                            Text(
-                              AppLocalizations.of(context)!.room,
-                                style: const TextStyle(
-                                    color:  const Color(0xff006633),
-                                    fontWeight: FontWeight.w400,
-                                    fontFamily: "Cairo",
-                                    fontStyle:  FontStyle.normal,
-                                    fontSize: 16.0
-                                ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    FloatingActionButton(onPressed: (){
-                      setState(() {
-                        roomNumber--;
-                      });
-                    },
-                      child: Icon(Icons.remove,
-                      color: const Color(0xff006633),),
-                      backgroundColor: Colors.white,
-                      mini: true,
-
-                    ),
-                    SizedBox(width: 10,
-                    ),
-                    Text(
-                      "$roomNumber",
-                      style: const TextStyle(
-                        color:  const Color(0xff5b6180),
-                          fontWeight: FontWeight.w700,
-                          fontFamily: "Cairo",
-                          fontStyle:  FontStyle.normal,
-                          fontSize: 20,
-                      ),
-                      textAlign: TextAlign.left,
-                    ),
-                    SizedBox(width: 10,
-                    ),
-                    FloatingActionButton(onPressed: (){
-                      setState(() {
-                        roomNumber++;
-                      });
-                    },
-                      child: Icon(Icons.add,
-                        color: const Color(0xff006633),),
-                      backgroundColor: Colors.white,
-                      mini: true,
-
-                    ),
-
-                  ],
-                ),
-              ),
-            ),
             SizedBox(height: 30,
             ),
             // Rectangle 686
@@ -441,6 +336,129 @@ class _SelectRoomsScreenState extends State<SelectRoomsScreen> {
             ),
             SizedBox(height: 30,),
             // Rectangle 573
+            // Class
+            Text(
+              AppLocalizations.of(context)!.classFlight,
+
+              style: const TextStyle(
+                    color:  const Color(0xff313131),
+                    fontWeight: FontWeight.w700,
+                    fontFamily: "Cairo",
+                    fontStyle:  FontStyle.normal,
+                    fontSize: 13.0
+                ),
+
+            ),
+            SizedBox(height: 20,),
+            Row(
+              children: [
+                // Rectangle 693
+                Expanded(
+                  child: Container(
+                      width: double.infinity,
+                      height:24,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(
+                              Radius.circular(7)
+                          ),
+                          boxShadow: [BoxShadow(
+                              color: const Color(0x40000000),
+                              offset: Offset(0,3),
+                              blurRadius: 6,
+                              spreadRadius: 0
+                          )] ,
+                          color: const Color(0xffffffff)
+                      ),
+                    child: // FIRST
+                    Center(
+                      child: Text(
+                        AppLocalizations.of(context)!.first,
+                          style: const TextStyle(
+                              color:  const Color(0xff313131),
+                              fontWeight: FontWeight.w400,
+                              fontFamily: "Cairo",
+                              fontStyle:  FontStyle.normal,
+                              fontSize: 11.0
+                          ),
+                          textAlign: TextAlign.center
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(width: 10,
+                ),
+                // Rectangle 694
+                Expanded(
+                  child: Container(
+                    width:  double.infinity,
+                    height:24,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(
+                            Radius.circular(7)
+                        ),
+                        boxShadow: [BoxShadow(
+                            color: const Color(0x40000000),
+                            offset: Offset(0,3),
+                            blurRadius: 6,
+                            spreadRadius: 0
+                        )] ,
+                        color: const Color(0xffffffff)
+                    ),
+                    child: // BUSINESS
+                    Center(
+                      child: Text(
+                        AppLocalizations.of(context)!.economy,
+                          style: const TextStyle(
+                              color:  const Color(0xff313131),
+                              fontWeight: FontWeight.w400,
+                              fontFamily: "Cairo",
+                              fontStyle:  FontStyle.normal,
+                              fontSize: 11.0
+                          ),
+                          textAlign: TextAlign.center
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(width: 10,
+                ),
+
+                // Rectangle 695
+                Expanded(
+                  child: Container(
+                      width:  double.infinity,
+                      height:24,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(
+                              Radius.circular(7)
+                          ),
+                          boxShadow: [BoxShadow(
+                              color: const Color(0x40000000),
+                              offset: Offset(0,3),
+                              blurRadius: 6,
+                              spreadRadius: 0
+                          )] ,
+                          color: const Color(0xffffffff)
+                      ),
+                    child: // BUSINESS
+                    Center(
+                      child: Text(
+                        AppLocalizations.of(context)!.business,
+                          style: const TextStyle(
+                              color:  const Color(0xff313131),
+                              fontWeight: FontWeight.w400,
+                              fontFamily: "Cairo",
+                              fontStyle:  FontStyle.normal,
+                              fontSize: 11.0
+                          ),
+                          textAlign: TextAlign.center
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
+            SizedBox(height: 30,),
             MaterialButton(
               onPressed: (){},
               child: Container(

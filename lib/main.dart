@@ -1,6 +1,7 @@
 import 'package:afarim/modules/en/Search/flight/boarding_pass.dart';
 import 'package:afarim/modules/en/Search/flight/review_your_trip.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'layers/home_layer.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'modules/splash_screen/splash_screen.dart';
@@ -15,19 +16,20 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  Locale? _locale;
-
-  void setLocale(Locale value) {
-    setState(() {
-      _locale = value;
-    });
-  }
-  @override
 
   @override
   Widget build(BuildContext context) {
 
     return MaterialApp(
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          backwardsCompatibility: false,
+          systemOverlayStyle: SystemUiOverlayStyle(
+            statusBarColor: Colors.black,
+            statusBarIconBrightness: Brightness.light,
+          ),
+        ),
+      ),
       debugShowCheckedModeBanner: false,
       localizationsDelegates: [
         AppLocalizations.delegate, // Add this line
@@ -35,7 +37,6 @@ class _MyAppState extends State<MyApp> {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      locale: _locale,
       supportedLocales: [
         Locale("af"),
         Locale("am"),
